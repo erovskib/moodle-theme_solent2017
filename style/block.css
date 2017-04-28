@@ -1,0 +1,83 @@
+/* course CSS
+-------------------------*/
+.block .header h2 {
+	color: #575757;
+}
+
+.block{
+	background-color: #fff;
+	border:none;
+	border-bottom: 3px solid #d4d4d4;
+	box-shadow: none;
+	border-radius: 0px;
+}
+
+aside#block-region-side-pre{
+	height: 100%;
+	border:none;
+}
+
+aside#block-region-side-post{
+	height: 100%;
+	border:none;
+}
+
+#page-block-quickmail .mform #add_button, #remove_button, #add_all, #remove_all {
+    min-height: 35px;
+}
+
+div.block_login{
+	margin-top:100px;
+}
+
+.block_course_overview_current .content h2.title, .block_course_overview_past .content h2.title  {
+	font-size: 20px;
+	margin-bottom:0px;
+}
+
+.block_course_overview_current .coursebox, .block_course_overview_past .coursebox,
+.block_course_overview_current .courseboxc, .block_course_overview_past .courseboxc{
+	border:none;
+	margin:0px;
+	padding: 5px 15px 5px 15px
+}
+
+.block_course_overview_past.block, .block_course_overview_current.block{
+	border:none !important;
+}
+
+.block_course_overview_current .content, .block_course_overview_past .content{
+	border:none;
+	padding:0 0 0 15px;
+	margin:0px;
+}
+
+/* PANOPTO */
+.block_panopto .rssLink
+{
+    font-size: inherit;
+}
+
+.block_panopto .listItem
+{
+    font-size: inherit;
+}
+
+.block_panopto #showAllToggle
+{
+    font-size: inherit;
+}
+
+/* End Panopto */
+
+/* Course overview */
+.block_course_overview_current .coursebox_current, .block_course_overview_past .courseboxp {
+    padding: 5px;
+}
+/* End Course overview */
+
+/* Course module navigation */
+.block.block_course_modulenavigation .section-default > .section-heading {    
+    background-color: #fff;
+}
+/* End Course module navigation */

@@ -1,0 +1,25 @@
+/* course CSS
+-------------------------*/
+.course-content ul.topics li.section{
+	margin-left: 0px;
+}
+
+.course-content li.section ul, .course-content ul.topics li.section .content, .course-content ul.weeks li.section .content {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+div.no-overflow li {
+    margin-left: 20px;
+}
+
+ul.topics > div.content > div.summary {
+    padding-top: 10px;
+}
+
+.course-content div.onetopic ul.topics li.section .summary {
+    padding-top: 0px;
+}
+.course-content ul.topics li.section .summary {
+    margin-top: 35px;
+}
