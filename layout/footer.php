@@ -1,5 +1,4 @@
 <div class="footer-wrap">
-	<!--<footer class="f-footer footer--top">-->
 	<div class="f-footer footer--top">
 		<div class="row">
 			<div class="medium-3 f-column stack">
@@ -21,7 +20,6 @@
 						<li><a class="footer__item nav__item" href="http://email.solent.ac.uk" target="_blank">Email</a></li>
 						<li><a class="footer__item nav__item" href="https://timetable.solent.ac.uk/" target="_blank">Timetables</a></li>
 						<li><a class="footer__item nav__item" href="http://portal.solent.ac.uk/support/official-documents/term-dates/term-dates.aspx" target="_blank">Term Dates</a></li>
-						<!--<li><a class="footer__item nav__item" href="http://portal.solent.ac.uk/support/official-documents/term-dates/term-dates.aspx" target="_blank">Academic Calendar</a></li>-->
 						<li><a class="footer__item nav__item" href="http://portal.solent.ac.uk/" target="_blank">Portal</a></li>
 					</ul>
 				</nav>
@@ -63,19 +61,17 @@
 				</nav>
 			</div>
 		</div>
-	<!--</footer>-->
 	</div>
 
-	<!--<footer class="f-footer footer--bottom">-->
 	<div class="f-footer footer--bottom">
 		<div class="row">
 			<div class="large-4 f-column">
 				<nav class="nav">
 					<ul class="menu social-wrap">
-						<li><a class="social twitter" href="https://twitter.com/solentofficial" target="_blank">&nbsp;</a></li>
-						<li><a class="social facebook" href="https://www.facebook.com/solentuniversity" target="_blank">&nbsp;</a></li>
-						<li><a class="social youtube" href="https://www.youtube.com/user/SolentUniOfficial" target="_blank">&nbsp;</a></li>
-						<li><a class="social linkedin" href="https://www.linkedin.com/edu/southampton-solent-university-12644" target="_blank">&nbsp;</a></li>
+						<li><a class="social twitter" href="https://twitter.com/solentofficial" target="_blank">&#160;</a></li>
+						<li><a class="social facebook" href="https://www.facebook.com/solentuniversity" target="_blank">&#160;</a></li>
+						<li><a class="social youtube" href="https://www.youtube.com/user/SolentUniOfficial" target="_blank">&#160;</a></li>
+						<li><a class="social linkedin" href="https://www.linkedin.com/edu/southampton-solent-university-12644" target="_blank">&#160;</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -84,6 +80,5 @@
 				<p class="footer__copyright">© Southampton Solent University</p>
 			</div>
 		</div>
-	<!--</footer>-->
 	</div>
 </div>

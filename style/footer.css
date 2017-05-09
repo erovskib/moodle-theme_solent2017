@@ -1,0 +1,223 @@
+/* FOOTER */
+
+.page-wrap{
+	margin: 0 auto;	
+    padding-bottom: 25px;
+	min-height: 500px;
+	/* padding-top: 20px; */
+}
+
+footer.site-footer { 
+	height: 400px;
+	position: relative;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.f-column, .columns {
+    width: 100%;
+    float: left;
+	text-align: left;
+}
+
+.f-footer a:link, .f-footer a:visited, .f-footer a:hover,.f-footer a:focus, .f-footer a:active{
+    color: #a8a8a8;
+}
+
+.f-footer {
+    font-size: 15px;
+    padding: 60px 10px 30px;
+    background-color: #3a3b3f;
+}
+
+.footer--bottom {
+    border-top: 1px solid #616265;
+    padding: 20px 0 20px;
+    text-align: center;
+}
+
+.footer--bottom .column:first-child, .footer--bottom .columns:first-child {
+    float: right;
+    padding-right: 15px;
+}
+
+.footer__title{
+	line-height:1;
+}
+
+.footer__title {
+    border-bottom: 0;
+    font-size: 20px;
+	color: #fff !important;
+}
+
+li > a.footer__item .nav__item{
+	line-height:25px;
+}
+
+#page-footer > div.footer-wrap > footer.f-footer.footer--bottom > div > div.large-8.f-column > nav > ul{
+    float: left;
+    margin: 0px;
+}
+
+.menu.simple li {
+    line-height: 1;
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+#page-footer{
+	padding-bottom: 0px;
+	border: none;
+	padding-top: 0px;
+	margin-top:0px;
+} 
+
+.row {
+    max-width: 75rem;
+    margin-left: auto;
+    margin-right: auto;
+    clear: both;
+}
+
+.yui-panel-container.yui-dialog.shadow{
+	top: 80px;
+}
+
+@media screen and (min-width: 40em){
+	.medium-3 {
+		width: 20%;
+	}
+
+	p.footer__copyright{
+		color: #a8a8a8;
+	}
+	
+	ul.vertical{
+		margin: 0;
+		list-style-type: none;
+	}
+}
+
+@media screen and (max-width: 64em){
+	ul.menu.social-wrap {
+		text-align: center;
+		margin-left: 0px;
+	}
+	
+	p.footer__copyright{
+		text-align: center;
+	}
+	
+	.ssu_logo {
+		margin: auto;
+	}
+}
+
+@media screen and (min-width: 64em){
+	.large-4 {
+		width: 30%;
+		float: right;
+	}
+
+	.large-8 {
+		width: 70%;
+		float:left;
+	}
+	
+	.medium-3 {
+		width: 20%;
+	}
+	
+	ul.menu.social-wrap {
+		padding-top: 15px;
+		float: right;
+		padding-right: 15px;
+	}
+}
+/* END FOOTER */
+
+.twitter {
+	background-image: url("/theme/solent2017/pix/twitter.svg");
+	background-size: 25px;
+	outline:none;
+	text-decoration:none;
+}
+
+.twitter:hover, .twitter:focus {
+	background-image: url("/theme/solent2017/pix/twitter-dark.svg");
+	background-size: 25px;
+	background-color: #fff;
+	outline:none;
+	-webkit-transition: all .4s ease-out 0s;
+    transition: all .4s ease-out 0s;
+	text-decoration:none;
+}
+
+.facebook {
+	background-image: url("/theme/solent2017/pix/facebook.svg");
+	background-size: 14px;
+}
+
+.facebook:hover, .facebook:focus {
+	background-image: url("/theme/solent2017/pix/facebook-dark.svg");
+	background-size: 14px;
+	background-color: #fff;
+	outline:none;
+	-webkit-transition: all .4s ease-out 0s;
+    transition: all .4s ease-out 0s;
+	text-decoration:none;
+}
+
+.youtube {
+	background-image: url("/theme/solent2017/pix/youtube.svg");
+	background-size: 25px;
+}
+
+.youtube:hover, .youtube:focus {
+	background-image: url("/theme/solent2017/pix/youtube-dark.svg");
+	background-size: 25px;
+	background-color: #fff;
+	outline:none;
+	-webkit-transition: all .4s ease-out 0s;
+    transition: all .4s ease-out 0s;
+	text-decoration:none;
+}
+
+.linkedin {
+	background-image: url("/theme/solent2017/pix/linkedin.svg");
+	background-size: 23px;
+}
+
+.linkedin:hover, .linkedin:focus {
+	background-image: url("/theme/solent2017/pix/linkedin-dark.svg");
+	background-size: 23px;
+	background-color: #fff;
+	outline:none;
+	-webkit-transition: all .4s ease-out 0s;
+    transition: all .4s ease-out 0s;
+	text-decoration:none;
+}
+
+.ssu_logo {
+	background-image: url("/theme/solent2017/pix/logo-ssu.png");
+	background-repeat: no-repeat;
+	height: 72px;
+	width: 191px;
+	padding-bottom: 10px;
+}
+
+.social {
+	background-position: center;
+	background-repeat: no-repeat;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	display: inline-block;
+	height: 44px;
+	width: 44px;
+}
+
+.social-wrap li {
+	display: inline-block;
+}

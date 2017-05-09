@@ -12,6 +12,11 @@
 	border-radius: 0px;
 }
 
+p.active_tree_node > a{
+	color: #e20613;
+	font-weight: bold;
+}
+
 aside#block-region-side-pre{
 	height: 100%;
 	border:none;

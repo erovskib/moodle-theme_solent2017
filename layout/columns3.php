@@ -66,6 +66,7 @@ echo $OUTPUT->doctype() ?>
 				</div>
             <?php echo $OUTPUT->navbar_button(); ?>
 			<?php echo $OUTPUT->ssu_user_menu(); ?>
+			<?php echo $OUTPUT->navbar_plugin_output(); ?>  
 			<?php if(isloggedin() && !isguestuser()){
 					echo "	<div class='nav-collapse collapse'>
 								<div id='searchwrap' class='nav'>
@@ -77,7 +78,7 @@ echo $OUTPUT->doctype() ?>
 							</div>";
 				} ?>
 			<?php echo $OUTPUT->search_box(); ?>
-            <?php echo $OUTPUT->navbar_plugin_output(); ?>            
+                      
             <div class="nav-collapse collapse">
                 <?php echo $OUTPUT->custom_menu(); ?>
                 <ul class="nav pull-right">
@@ -138,7 +139,7 @@ if((!isloggedin() || isguestuser()) && $current_url == $CFG->wwwroot . '/index.p
 </div><!-- end wrapper-->	
 	<footer class="site-footer" id="page-footer">
 		<!--<div id="course-footer"><?php //echo $OUTPUT->course_footer(); ?></div>-->
-		<?php include_once 'footer.php'; ?>
+		<?php include($CFG->dirroot.'/theme/solent2017/layout/footer.php'); ?>
 	</footer>
 
 		<?php echo $OUTPUT->standard_end_of_body_html() ?>

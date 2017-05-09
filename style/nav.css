@@ -56,7 +56,8 @@
 	}
 }
 
-@media (min-width: 1030px){
+/* @media (min-width: 1030px){ */
+@media (min-width: 1094px){
 	#brand_container {
 		margin-top: 21px;
 		display: block;
@@ -76,7 +77,8 @@
 	}
 }
 
-@media (max-width: 1029px){
+/* @media (max-width: 1029px){ */
+@media (max-width: 1093px){
 	
 	.navbar .brand {
 		padding: 5px 20px 5px 12px;
@@ -122,11 +124,16 @@
 	
 	/* Burger Menu */
 	
+	.navbar .btn-navbar {
+		margin-right: -10px;
+	}
+	
 	.navbar .btn-navbar.collapsed {
 		width: 34px;
 		height: 34px;
 		overflow: hidden;
-		margin-right: 15px;
+		margin-right: 0px;
+		margin-left: 5px !important;
 	}
 	.navbar .btn-navbar .icon-bar {
 		display: block;
@@ -377,15 +384,31 @@
 	}	
 }
 
-.popover-region{
-	padding-top: 19px;
+@media (max-width: 767px){		
+	body {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	
+	.navbar .popover-region-toggle img {
+		height: 25px;
+		width: 25px;
+		padding-left: 0px;
+		padding-right: 0px;
+	}
 }
 
-.navbar .popover-region-toggle img {
-    height: 30px;
-    width: 30px;
-	opacity: 0.7;
-	padding-right: 15px;
+@media (min-width: 768px){	
+	.navbar .popover-region-toggle img {
+		height: 28px;
+		width: 28px;
+		opacity: 0.7;
+		padding-right: 15px;
+	}
+}
+
+.popover-region{
+	padding-top: 19px;
 }
 
 .popover-region-toggle::after {
@@ -435,3 +458,161 @@
 .dropdown-submenu>a:after{
 	display: none;
 }
+
+.moodle-actionmenu[data-enhanced].show .menu a{
+	color: #fff;
+}
+
+.dropdown-menu, .moodle-actionmenu[data-enhanced].show .menu {
+	background-color: #3a3b3f;
+    border-radius: 2px;
+	margin-top: 13px;
+}
+
+.navbar .nav>li>.dropdown-menu:before, .navbar .nav>li>.dropdown-menu:after{
+	display: none;
+}
+
+.dropdown-menu > li >a{
+	color: #fff;
+	padding: 10px 12px;
+	font-size: 13px;
+	line-height: 18px;
+}
+
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus, .dropdown-submenu:hover>a, .dropdown-submenu:focus>a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #2c2d2e;
+    background-image: none;
+}
+
+header > nav > div > div.nav-collapse.collapse > ul:nth-child(1) > li.dropdown > a > b{
+	display: none;
+}
+
+ul.nav{
+	font-weight: bold;
+}
+
+ul.nav.nav-tabs > li.active a{
+	color: #e20613;
+} 
+
+/*USER MENU*/
+.jsenabled .usermenu .moodle-actionmenu.show {
+    background-color: #fff;
+}
+
+div.feedback_item_box_left div.feedback_item_label_left, div.feedback_item_box_left div.feedback_item_presentation_left {
+    margin-left: 25px;
+}
+
+ul#action-menu-0-menu > li > a {
+	background-color: #3a3b3f;
+	background-image: none; 
+	font-size: 13px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+ul#action-menu-0-menu > li > a:hover, ul#action-menu-0-menu > li > a:focus {
+	background-color: #2c2d2e;
+	background-image: none; 
+	font-size: 13px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+ul#action-menu-0-menu:before{
+    display: none; 
+}
+
+ul#action-menu-0-menu:after {
+    display: none; 
+}
+
+.jsenabled .usermenu .moodle-actionmenu.show .menu.align-tr-br {
+    margin-top: 21px;
+}
+
+.jsenabled .usermenu .moodle-actionmenu .toggle-display.textmenu {
+    padding-left: 0px;
+}
+
+.usermenu .moodle-actionmenu .toggle-display {
+	color: rgb(87, 87, 87);
+	font-weight: bold;
+} 
+
+.usermenu .moodle-actionmenu[data-enhanced] .menu .menu-action.icon img,
+.usermenu .moodle-actionmenu[data-enhanced] .menu .menu-action.icon:hover img,
+.usermenu .moodle-actionmenu[data-enhanced] .menu .menu-action.icon:focus img {
+	-webkit-filter: brightness(0) invert(1);
+}
+
+.userprofile .profile_tree section {
+    border-radius: 2px;
+}
+
+.moodle-actionmenu ul {
+	font-weight: normal;
+}
+
+.usermenu .moodle-actionmenu .toggle-display .userbutton .avatars {
+    margin-right: 0px;
+}
+
+.usermenu .moodle-actionmenu .toggle-display .caret {
+	display: none !important;
+}
+
+span.usertext{
+	padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+ul.nav > li > a, span.usertext{
+	position: relative;
+	color: #000;
+	text-decoration: none;	
+}
+
+div.nav-collapse.collapse > ul.nav > li > a:hover, span.usertext:hover,
+div.nav-collapse.collapse > ul.nav > li > a:focus, span.usertext:focus{	
+	color: #000;
+}
+
+.navbar .nav li.dropdown.open>.dropdown-toggle, .navbar .nav li.dropdown.active>.dropdown-toggle, .navbar .nav li.dropdown.open.active>.dropdown-toggle{	
+	background-color: #fff;
+}
+
+.navbar .brand {
+	color: #333;
+	margin-left: 0px;
+	font-size:26px;
+	border-left: 2.5pt solid #e20613;
+	font-weight: bold;
+}
+
+nav.navbar-inner{
+	min-height: 80px;
+	background-image: none;
+	background-color: #fff;
+	border:none;
+	border-bottom: 3px solid #fff;
+}
+
+.nav-border {
+	-webkit-transition: border .5s linear;
+	-moz-transition: border .5s linear;
+	box-shadow: 0 5px 8px rgba(0,0,0,0.15);
+	box-shadow: 0px 2px 7px rgba(100, 100, 100, 0.20);
+	transition: opacity 0.5s ease-in-out;
+}
+
+.navbar-fixed-top .navbar-inner, 
+.navbar-static-top .navbar-inner {
+	box-shadow: none;
+	border-bottom: 1px solid #d4d4d4;
+}
+

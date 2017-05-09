@@ -366,12 +366,11 @@ class theme_solent2017_core_renderer extends theme_bootstrapbase_core_renderer {
 				$courses = reset($courses);
 			}		
 
-			$bookmarks = $DB->get_records_sql('SELECT * FROM {mybookmarks} WHERE user = ? ORDER BY sort_order ASC', array($USER->id));
-//print_object($bookmarks);			
-			$mycourses = "Current Pages|#
+			$bookmarks = $DB->get_records_sql('SELECT * FROM {mybookmarks} WHERE user = ? ORDER BY sort_order ASC', array($USER->id));		
+			$mycourses = "Current Pages|
 			"; //this MUST be on a new line otherwise the menu messes up
 			
-			$mycourses .= "	-My Bookmarks|#
+			$mycourses .= "	-My Bookmarks|
 							--Bookmark this page|/local/mybookmarks/addbookmark.php
 							--Manage my bookmarks|/local/mybookmarks/manage.php
 			";
@@ -463,6 +462,11 @@ class theme_solent2017_core_renderer extends theme_bootstrapbase_core_renderer {
         return $title . '<nav aria-labelledby="navbar-label"><ul class="breadcrumb">' .
                 $list_items . '</ul></nav>';
     }
+	
+	// public function footer() {
+		// $output = include_once('../layout/footer.php');			
+        // return $output;
+    // }
 // SSU_AMEND END	
 }
 
