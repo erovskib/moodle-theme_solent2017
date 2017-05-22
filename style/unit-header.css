@@ -5,6 +5,7 @@ div#page-navbar-unit{
 	min-height: 250px;
 	margin-bottom: 10px;
 	background-position: 100% 20%; 
+	margin-top: 20px;
 }
 
 /* div#page-navbar-unit .breadcrumb{ */
@@ -30,7 +31,7 @@ div#page-navbar-unit{
 /* } */
 
 div#page-navbar-unit > .breadcrumb-button{
-    margin-top: 10px;
+    margin-top: 20px;
     margin-right: 115px;
 }
 
@@ -42,4 +43,12 @@ div#page-navbar-unit > .breadcrumb-button{
     margin-left: 110px;
 	padding: 20px;
 	border-radius: 2px;	
+}
+
+header#page-header{
+	padding-top: 35px;
+}
+
+fieldset.coursefieldset{
+	display: inline-block;
 }

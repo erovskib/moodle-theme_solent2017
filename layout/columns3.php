@@ -97,13 +97,19 @@ if((!isloggedin() || isguestuser()) && $current_url == $CFG->wwwroot . '/index.p
 ?>
 
 <?php 
-// global $COURSE;
-// if($COURSE->id == 2){
-	echo $OUTPUT->full_header();
-// }
+global $COURSE;
+if($COURSE->id > 1){
+	echo $OUTPUT->full_header_ssu();
+}
 ?>
 	<div id="page" class="container-fluid">
-		<?php //echo $OUTPUT->full_header(); ?>
+		<?php 
+		if($COURSE->id == 1){
+			echo $OUTPUT->full_header(); 
+		}	
+		echo solent_number_of_sections();
+		echo solent_header_image();
+		?>
 		<div id="page-content" class="row-fluid">
 			<div id="region-main-box" class="<?php echo $regionmainbox; ?>">
 				<div class="row-fluid">
@@ -114,7 +120,8 @@ if((!isloggedin() || isguestuser()) && $current_url == $CFG->wwwroot . '/index.p
 ?>	
 					<section id="region-main" class="<?php echo $regionmain; ?>">
 						<?php
-						echo solent_number_of_sections();
+						// echo solent_number_of_sections();
+						// echo solent_header_image();
 						//echo $OUTPUT->course_content_header();
 						// If in course or unit pages categories add the course title elements
 						global $DB;

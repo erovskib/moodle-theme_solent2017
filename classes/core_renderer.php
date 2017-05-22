@@ -463,7 +463,7 @@ class theme_solent2017_core_renderer extends theme_bootstrapbase_core_renderer {
                 $list_items . '</ul></nav>';
     }
 	
-	public function full_header() {
+	public function full_header_ssu() {
         // $html = html_writer::start_tag('header', array('id' => 'page-header', 'class' => 'clearfix'));
         // $html .= $this->context_header();
         // $html .= html_writer::start_div('clearfix', array('id' => 'page-navbar'));

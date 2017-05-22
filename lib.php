@@ -182,7 +182,7 @@ function solent2017_set_customcss() {
 
 
 // SSU_AMEND START - ADD SECTIONS DROPDOWN 
-function solent_number_of_sections (){
+function solent_number_of_sections(){
 	global $CFG, $COURSE,$PAGE, $USER;
 	if ($PAGE->user_is_editing()){
 		$i = 1;
@@ -191,10 +191,10 @@ function solent_number_of_sections (){
 		$oncoursepage = substr($_SERVER['REQUEST_URI'] ,1,11);
 
 		if ($oncoursepage == 'course/view'){
-			echo 	'<div id = "course-content" style="text-align:center;">
-					<fieldset id="coursefieldset">
+			echo 	'<div id="course-content" style="text-align:center;">
+					<fieldset class="coursefieldset">
 					<form action="'. $CFG->wwwroot .'/local/add_sections_query.php" method="post">
-					<label for "secnumbers">Number of Weeks/Topics/Tabs:&nbsp; </label>
+					<label for "secnumbers">Number of Weeks/Topics/Tabs:&nbsp; 
 					<select name="secnumbers">';
 			while ($i<=52) {
 				   if ($i == $secnum){
@@ -206,10 +206,52 @@ function solent_number_of_sections (){
 			}
 			   
 			echo '  <input type="hidden" name="courseid" value="'. $COURSE->id .'"/>';
-			echo '&nbsp;&nbsp;&nbsp;<input type="submit" value ="save">
-				 </select></form></fieldset></div>	';
+			echo '&nbsp;&nbsp;&nbsp;<input type="submit" value ="Save">
+				 </select></label></form></fieldset><br />';
+		}
+		
+		if ($COURSE->id > 1){
+			echo 	'<fieldset class="coursefieldset">
+					<form action="'. $CFG->wwwroot .'/local/set_header_image.php" method="post">
+					<label for "headerimg">Select header image:&nbsp; 
+					<select name="headerimg">';			
+					   echo '<option value="">Not selected</option>';
+					   echo '<option value="1">Option 1</option>';
+					   echo '<option value="2">Option 2</option>';
+					   echo '<option value="3">Option 3</option>';
+			   
+			echo '  <input type="hidden" name="courseid" value="'. $COURSE->id .'"/>';
+			echo '&nbsp;&nbsp;&nbsp;<input type="submit" value ="Save">
+				 </select></label></form></fieldset></div>';
 		}
 	}
+}
+
+function solent_header_image(){
+	// global $CFG, $COURSE,$PAGE, $USER;
+	// if ($PAGE->user_is_editing()){
+		// $i = 1;
+		// //$courseformatoptions = course_get_format($COURSE)->get_format_options();
+		// //$secnum = $courseformatoptions['numsections'];
+		// //$oncoursepage = substr($_SERVER['REQUEST_URI'] ,1,11);
+
+		// if ($COURSE->id > 1){
+			// echo 	'<div id = "course-content" style="text-align:center;">
+					// <fieldset id="coursefieldset">
+					// <form action="'. $CFG->wwwroot .'/local/set_header_image.php" method="post">
+					// <span style="white-space:nowrap">
+					// <label for "headerimg">Select header image:&nbsp; </label>
+					// <select name="headerimg">';			
+					   // echo '<option value="">Not selected</option>';
+					   // echo '<option value="1">Option 1</option>';
+					   // echo '<option value="2">Option 2</option>';
+					   // echo '<option value="3">Option 3</option>';
+			   
+			// echo '  <input type="hidden" name="courseid" value="'. $COURSE->id .'"/>';
+			// echo '&nbsp;&nbsp;&nbsp;<input type="submit" value ="save">
+				 // </select></span></form></fieldset></div>	';
+		// }
+	// }
 }
 
 // SSU_AMEND END

@@ -44,11 +44,6 @@
 		color: rgb(87, 87, 87);
 	}
 	
-	.page-wrap{
-		/* padding-top: 35px; */
-		padding-top: 20px;
-	}
-	
 	strong > a[id]:before {
 		content: "";
 		display: flex;
