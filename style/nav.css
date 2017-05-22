@@ -45,7 +45,8 @@
 	}
 	
 	.page-wrap{
-		padding-top: 35px;
+		/* padding-top: 35px; */
+		padding-top: 20px;
 	}
 	
 	strong > a[id]:before {

@@ -95,8 +95,15 @@ if((!isloggedin() || isguestuser()) && $current_url == $CFG->wwwroot . '/index.p
 	echo "<div id='logged_out'>";
 }
 ?>
+
+<?php 
+// global $COURSE;
+// if($COURSE->id == 2){
+	echo $OUTPUT->full_header();
+// }
+?>
 	<div id="page" class="container-fluid">
-		<?php echo $OUTPUT->full_header(); ?>
+		<?php //echo $OUTPUT->full_header(); ?>
 		<div id="page-content" class="row-fluid">
 			<div id="region-main-box" class="<?php echo $regionmainbox; ?>">
 				<div class="row-fluid">
@@ -108,15 +115,16 @@ if((!isloggedin() || isguestuser()) && $current_url == $CFG->wwwroot . '/index.p
 					<section id="region-main" class="<?php echo $regionmain; ?>">
 						<?php
 						echo solent_number_of_sections();
-						echo $OUTPUT->course_content_header();
+						//echo $OUTPUT->course_content_header();
 						// If in course or unit pages categories add the course title elements
 						global $DB;
 							if ( substr ($_SERVER['REQUEST_URI'], 0, 20)  == '/course/view.php?id='){
 							$whichcategory =  $DB->get_record_sql('SELECT name  FROM {course_categories} WHERE '.$COURSE->category.' = mdl_course_categories.id ');
 							 if ($whichcategory->name != "Succeed" ||$whichcategory->name != "CareerBox"){
-								 include ($CFG->dirroot.'/local/course_title_elements.php');
+								 //include($CFG->dirroot.'/local/course_title_elements.php');
 							 }
 							}
+						include($CFG->dirroot.'/theme/layout/jumbotron.php');
 						echo $OUTPUT->main_content();
 						?>
 					</section>
