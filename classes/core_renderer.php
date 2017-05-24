@@ -473,10 +473,12 @@ class theme_solent2017_core_renderer extends theme_bootstrapbase_core_renderer {
         // $html .= html_writer::tag('div', $this->course_header(), array('id' => 'course-header'));
         // $html .= html_writer::end_tag('header');
         // return $html;
-		global $COURSE;
-		html_writer::start_tag('header', array('id' => 'page-header-unit', 'class' => 'clearfix'));
+		global $COURSE, $DB;
+		$opt = $DB->get_record('theme_header', array('course' => $COURSE->id), '*');
+		//print_r($opt);
+		$html = html_writer::start_tag('header', array('id'=>'page-header-unit', 'class'=>'clearfix'));
         $html .= $this->context_header();
-        $html .= html_writer::start_div('clearfix', array('id' => 'page-navbar-unit'));
+        $html .= html_writer::start_div('clearfix', array('id'=>'page-navbar-unit', 'class'=>'opt'.$opt->opt));
 		$html .= html_writer::start_div('unit_title') . $COURSE->fullname . html_writer::end_div();
         $html .= html_writer::div($this->page_heading_button(), 'breadcrumb-button');
         $html .= html_writer::end_div();

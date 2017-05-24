@@ -1,34 +1,26 @@
 /* Media CSS
 -------------------------*/
 div#page-navbar-unit{
-	background-image: url("/theme/solent2017/pix/unit-header/space.jpg");
+	/* background-image: url("/theme/solent2017/pix/unit-header/space.jpg"); */
 	min-height: 250px;
-	margin-bottom: 10px;
-	background-position: 100% 20%; 
+	margin-bottom: 10px;	
 	margin-top: 20px;
 }
 
-/* div#page-navbar-unit .breadcrumb{ */
-	/* background: none; */
-/* } */
+div#page-navbar-unit.opt1.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/space.jpg");
+	background-position: 100% 20%; 
+}
 
-/* div.breadcrumb-div{ */
-	/* float: left; */
-	/* margin-top: 5px; */
-    /* margin-bottom: 10px; */
-	/* margin-left:110px; */
-	/* background: rgba(255, 255, 255, 0.8);	 */
-	/* border-radius: 5px; */
-/* } */
+div#page-navbar-unit.opt2.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/earth.jpg");
+}
 
-/* .breadcrumb > li { */
-    /* text-shadow: none; */
-/* } */
-
-/* div.breadcrumb-div div.breadcrumb-nav{ */
-	/* padding-top: 0px; */
-	/* margin-bottom:0px; */
-/* } */
+div#page-navbar-unit.opt3.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/tree.jpg");
+	background-repeat: no-repeat;
+    background-size: cover;
+}
 
 div#page-navbar-unit > .breadcrumb-button{
     margin-top: 20px;
@@ -52,3 +44,4 @@ header#page-header{
 fieldset.coursefieldset{
 	display: inline-block;
 }
+

@@ -183,7 +183,7 @@ function solent2017_set_customcss() {
 
 // SSU_AMEND START - ADD SECTIONS DROPDOWN 
 function solent_number_of_sections(){
-	global $CFG, $COURSE,$PAGE, $USER;
+	global $CFG, $COURSE,$PAGE, $USER, $DB;
 	if ($PAGE->user_is_editing()){
 		$i = 1;
 		$courseformatoptions = course_get_format($COURSE)->get_format_options();
@@ -211,16 +211,24 @@ function solent_number_of_sections(){
 		}
 		
 		if ($COURSE->id > 1){
+			//get current option
+			$option = $DB->get_record('theme_header', array('course' => $COURSE->id), '*');
+			$options = array(1, 2, 3, 4);
+//print_r($option);	
+		
 			echo 	'<fieldset class="coursefieldset">
 					<form action="'. $CFG->wwwroot .'/local/set_header_image.php" method="post">
-					<label for "headerimg">Select header image:&nbsp; 
-					<select name="headerimg">';			
-					   echo '<option value="">Not selected</option>';
-					   echo '<option value="1">Option 1</option>';
-					   echo '<option value="2">Option 2</option>';
-					   echo '<option value="3">Option 3</option>';
+					<label for "opt">Select header image:&nbsp; 
+					<select name="opt">';	
+					
+						echo '<option value="0">Not selected</option>';
+						foreach($options as $val){
+							echo '<option value="' . $val . '"'; if($val == $option->opt) echo 'selected="selected"'; echo '>Option ' . $val . '</option>';
+						}
+					  
 			   
-			echo '  <input type="hidden" name="courseid" value="'. $COURSE->id .'"/>';
+			echo '  <input type="hidden" name="course" value="'. $COURSE->id .'"/>';
+			echo '  <input type="hidden" name="id" value="'. $option->id .'"/>';
 			echo '&nbsp;&nbsp;&nbsp;<input type="submit" value ="Save">
 				 </select></label></form></fieldset></div>';
 		}

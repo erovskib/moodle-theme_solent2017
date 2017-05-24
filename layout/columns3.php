@@ -130,8 +130,7 @@ if((!isloggedin() || isguestuser()) && $current_url == $CFG->wwwroot . '/index.p
 							 if ($whichcategory->name != "Succeed" ||$whichcategory->name != "CareerBox"){
 								 //include($CFG->dirroot.'/local/course_title_elements.php');
 							 }
-							}
-						include($CFG->dirroot.'/theme/layout/jumbotron.php');
+							}						
 						echo $OUTPUT->main_content();
 						?>
 					</section>
