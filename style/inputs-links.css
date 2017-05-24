@@ -34,7 +34,7 @@ input[type="reset"],
 a.btn, input[type="button"]:hover, 
 a.btn, input[type="button"]:focus, 
 input[type="button"]:active, 
-.path-admin .buttons input[type="submit"]{
+.path-admin .buttons input[type="submit"], .btn-primary, .btn[name="resetbutton"]{
 	background-color: #466273;
 	border: 1px solid #466273;
     border-radius: 2px;
@@ -61,11 +61,11 @@ button:hover, button:active, button:focus,
 a.btn:hover, a.btn:active, a.btn:focus, 
 input#id_submitbutton2:hover, input#id_submitbutton2:focus, 
 .path-admin .buttons input[type="submit"]:hover, .path-admin .buttons input[type="submit"]:focus
-#notice .singlebutton+.singlebutton input {
+#notice .singlebutton+.singlebutton input, .btn-primary:hover, .btn[name="resetbutton"]:hover {
     color: #575757;
     text-decoration: none;
     background-color: #fff;
-	border: 1px solid #466273;
+	border: 1px solid #466273 !important;
     -webkit-transition: background-position .1s linear;
     -moz-transition: background-position .1s linear;
     -o-transition: background-position .1s linear;
@@ -139,4 +139,26 @@ select{
 
 input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus, input[type="submit"].disabled, input[type="button"]:focus, input[type="reset"]:focus, input.form-submit[disabled], input[type="submit"][disabled], input#id_submitbutton:hover, input#id_submitbutton:active, input#id_submitbutton:focus, button:hover, button:active, button:focus, a.btn:hover, a.btn:active, a.btn:focus, input#id_submitbutton2:hover, input#id_submitbutton2:focus, .path-admin .buttons input[type="submit"]:hover, .path-admin .buttons input[type="submit"]:focus #notice .singlebutton+.singlebutton input {
     border: none;
+}
+
+/* messaging */
+
+.messaging-area-container .messaging-area .messages-area .profile{
+    font-size: inherit;
+}
+
+.messaging-area-container .messaging-area .messages-area .messages-header .name-container .status {
+    font-size: 14px;
+}
+
+.btn-link, .btn-link:hover{
+	border: none !important;
+}
+
+.messaging-area-container .btn.btn-link, .messaging-area-container .messaging-area .contacts-area .tabs .tab.selected, .messaging-area-container .messaging-area .contacts-area .tabs .tab:hover {
+    color: #005E8D;
+}
+
+.messaging-area-container .messaging-area .messages-area .profile .actions .separator a.danger, .messaging-area-container .status .offline-text {
+    color: #e20613;
 }
