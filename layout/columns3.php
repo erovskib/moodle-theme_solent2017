@@ -98,13 +98,17 @@ if((!isloggedin() || isguestuser()) && $current_url == $CFG->wwwroot . '/index.p
 
 <?php 
 global $COURSE;
-if($COURSE->id > 1){
-	echo $OUTPUT->full_header_ssu();
-}
+//if($COURSE->id > 1){
+	if($PAGE->pagelayout == 'course'){
+		echo $OUTPUT->full_header_ssu();
+		echo $OUTPUT->breadcrumbs_ssu();
+	}
+//}
 ?>
 	<div id="page" class="container-fluid">
 		<?php 
-		if($COURSE->id == 1){
+		//if($COURSE->id == 1){
+		if($PAGE->pagelayout != 'course'){
 			echo $OUTPUT->full_header(); 
 		}	
 		echo solent_number_of_sections();

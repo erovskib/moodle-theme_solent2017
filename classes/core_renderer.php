@@ -464,27 +464,38 @@ class theme_solent2017_core_renderer extends theme_bootstrapbase_core_renderer {
     }
 	
 	public function full_header_ssu() {
-        // $html = html_writer::start_tag('header', array('id' => 'page-header', 'class' => 'clearfix'));
-        // $html .= $this->context_header();
-        // $html .= html_writer::start_div('clearfix', array('id' => 'page-navbar'));
-        // $html .= html_writer::tag('div', $this->navbar(), array('class' => 'breadcrumb-nav'));
-        // $html .= html_writer::div($this->page_heading_button(), 'breadcrumb-button');
-        // $html .= html_writer::end_div();
-        // $html .= html_writer::tag('div', $this->course_header(), array('id' => 'course-header'));
-        // $html .= html_writer::end_tag('header');
-        // return $html;
 		global $COURSE, $DB;
 		$opt = $DB->get_record('theme_header', array('course' => $COURSE->id), '*');
-		//print_r($opt);
+		if($opt){
+			$opt = $opt->opt;
+		}else{
+			$record = new stdclass;
+			$record->id = null;
+			$record->course = $COURSE->id;
+			$record->opt = 1;
+			$DB->insert_record('theme_header', $record, $returnid=true);
+			$opt = 1;
+		}
+
 		$html = html_writer::start_tag('header', array('id'=>'page-header-unit', 'class'=>'clearfix'));
         $html .= $this->context_header();
-        $html .= html_writer::start_div('clearfix', array('id'=>'page-navbar-unit', 'class'=>'opt'.$opt->opt));
+        $html .= html_writer::start_div('clearfix', array('id'=>'page-navbar-unit', 'class'=>'opt'.$opt));
 		$html .= html_writer::start_div('unit_title') . $COURSE->fullname . html_writer::end_div();
         $html .= html_writer::div($this->page_heading_button(), 'breadcrumb-button');
         $html .= html_writer::end_div();
         $html .= html_writer::end_tag('header');
         return $html; 
-    }	
+    }
+
+	public function breadcrumbs_ssu() {
+		$html = html_writer::start_tag('header', array('id' => 'page-header-crumbs', 'class' => 'clearfix'));
+        $html .= $this->context_header();
+        $html .= html_writer::start_div('clearfix', array('id' => 'page-navbar-crumbs'));
+        $html .= html_writer::tag('div', $this->navbar(), array('class' => 'breadcrumb-nav'));
+        $html .= html_writer::end_div();
+        $html .= html_writer::end_tag('header');
+        return $html;
+	}
 
 // SSU_AMEND END	
 }
