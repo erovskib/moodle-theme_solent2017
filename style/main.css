@@ -69,7 +69,6 @@ div#content_hide > section#region-main{
 div#logged_out{
 	background-image: url("/theme/solent2017/pix/login.jpg");
 	height: 34.375rem;
-	/* margin-top: -20px; */
 	margin-bottom: -30px;
 	background-position: center;
     background-size: cover;
