@@ -4,7 +4,7 @@ div#page-navbar-unit{
 	/* background-image: url("/theme/solent2017/pix/unit-header/space.jpg"); */
 	min-height: 250px;
 	margin-bottom: 10px;	
-	margin-top: 20px;
+	/* margin-top: 20px; */
 }
 
 div#page-navbar-unit.opt1.clearfix{
@@ -28,17 +28,17 @@ div#page-navbar-unit > .breadcrumb-button{
 }
 
 .unit_title{
+	margin: 0 auto;
+    max-width: 1680px;
     color: #fff;
     font-size: 30pt;
     margin-top: 160px;
     float: left;
-    margin-left: 110px;
 	padding: 20px;
-	border-radius: 2px;	
 }
 
 header#page-header{
-	padding-top: 35px;
+	padding-top: 15px;
 }
 
 fieldset.coursefieldset{
@@ -46,7 +46,36 @@ fieldset.coursefieldset{
 }
 
 header#page-header-crumbs{
-	padding-left: 111px;
+	margin: 0 auto;
+    max-width: 1680px;
+}
+
+#auth_outage_warningbar_box{
+	color: #fff;
+	font-size: 20px;
+	font-weight: bold;
+    text-align: center;
+    padding: 10px 0px 10px 0px;
+}
+
+.auth_outage_warning_period{
+    background-color: orange;	
+}
+
+.auth_outage_ongoing_period{
+	background-color: #e20613;	
+}
+
+.auth_outage_imminent_period{
+	background-color: #7A378B;	
+}
+
+.auth_outage_warningbar_box_title, .auth_outage_warningbar_box_finish{
+	color: #fff !important;
+}
+
+.auth_outage_warningbar_spacer{
+	display:none;
 }
 
 

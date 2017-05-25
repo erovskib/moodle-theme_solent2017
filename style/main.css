@@ -29,8 +29,14 @@ body{
 	background-color: #f4f4f4 !important;
 	background: #f4f4f4 !important;
 	position: relative;
+	
 }
 
+@media (min-width: 980px){
+	body{
+		padding-top: 80px;
+	}
+}
 
 html{
 	height: 100%;
@@ -63,7 +69,7 @@ div#content_hide > section#region-main{
 div#logged_out{
 	background-image: url("/theme/solent2017/pix/login.jpg");
 	height: 34.375rem;
-	margin-top: -20px;
+	/* margin-top: -20px; */
 	margin-bottom: -30px;
 	background-position: center;
     background-size: cover;
