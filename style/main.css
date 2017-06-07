@@ -28,7 +28,7 @@ body{
 	color:#333;
 	background-color: #f4f4f4 !important;
 	background: #f4f4f4 !important;
-	position: relative;
+	/* position: relative; */
 	
 }
 
@@ -43,6 +43,11 @@ html{
 	box-sizing: border-box;	
 }
 
+div.course-content p, div.course-content ol, div.course-content li{
+	line-height: 1.75em;
+	letter-spacing: 0.45px;
+}
+
 section#region-main{
 	background-color: #fff;
 }
@@ -52,6 +57,21 @@ section#region-main{
 		padding: 10px 20px 10px 30px;	
 		border-radius: 2px;
 	}
+}
+
+.h4-solent{
+	letter-spacing: .25em;
+    text-transform: uppercase;
+	font-size: 18px;
+}
+
+.h4-solent:after{
+    background-color: #e20613;
+    content: "";
+    display: block;
+    height: 3px;
+    margin: 0.7rem 0 0;
+    width: 10%;
 }
 
 /* Sort this lot out */

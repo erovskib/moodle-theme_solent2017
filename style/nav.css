@@ -88,7 +88,7 @@
 		display: block;
 		font-size: 12pt;
 		line-height: 12pt;
-		letter-spacing: 1px;
+		letter-spacing: .25em;
 		margin-top:10px;
 	}
 }
@@ -593,9 +593,11 @@ div.nav-collapse.collapse > ul.nav > li > a:focus, span.usertext:focus{
 .navbar .brand {
 	color: #333;
 	margin-left: 0px;
-	font-size:26px;
+	font-size:22px;
 	border-left: 2.5pt solid #e20613;
 	font-weight: bold;
+	letter-spacing: .25em;
+    text-transform: uppercase;
 }
 
 nav.navbar-inner{

@@ -2,6 +2,8 @@
 -------------------------*/
 .block .header h2 {
 	color: #575757;
+	letter-spacing: .05em;
+    /* text-transform: uppercase !important; */
 }
 
 .block{
