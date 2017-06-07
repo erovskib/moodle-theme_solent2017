@@ -98,21 +98,23 @@ if((!isloggedin() || isguestuser()) && $current_url == $CFG->wwwroot . '/index.p
 
 <?php 
 global $COURSE;
-//if($COURSE->id > 1){
-	if($PAGE->pagelayout == 'course'){
+$unit_category = array(165,175,170,190,207,180,185);
+if($PAGE->pagelayout == 'course'){
+	//if(in_array($COURSE->category, $unit_category)){
 		echo $OUTPUT->full_header_ssu();
 		echo $OUTPUT->breadcrumbs_ssu();
-	}
-//}
+	//}else{
+		//echo $OUTPUT->full_header();
+	//}		
+}
 ?>
 	<div id="page" class="container-fluid">
 		<?php 
-		//if($COURSE->id == 1){
 		if($PAGE->pagelayout != 'course'){
+		//if($PAGE->pagelayout != 'course' || !in_array($COURSE->category, $unit_category)){
 			echo $OUTPUT->full_header(); 
 		}	
 		echo solent_number_of_sections();
-		echo solent_header_image();
 		?>
 		<div id="page-content" class="row-fluid">
 			<div id="region-main-box" class="<?php echo $regionmainbox; ?>">
@@ -124,9 +126,6 @@ if((!isloggedin() || isguestuser()) && $current_url == $CFG->wwwroot . '/index.p
 ?>	
 					<section id="region-main" class="<?php echo $regionmain; ?>">
 						<?php
-						// echo solent_number_of_sections();
-						// echo solent_header_image();
-						//echo $OUTPUT->course_content_header();
 						// If in course or unit pages categories add the course title elements
 						global $DB;
 							if ( substr ($_SERVER['REQUEST_URI'], 0, 20)  == '/course/view.php?id='){
