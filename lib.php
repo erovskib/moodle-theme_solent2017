@@ -191,12 +191,12 @@ function solent_number_of_sections(){
 		$oncoursepage = substr($_SERVER['REQUEST_URI'] ,1,11);
 
 		if ($oncoursepage == 'course/view'){
-			echo 	'<div id="course-content" style="text-align:center;">
+			echo 	'<div class="divcoursefieldset">
 					<fieldset class="coursefieldset">
 					<form action="'. $CFG->wwwroot .'/local/add_sections_query.php" method="post">
 					<label for "secnumbers">Number of Weeks/Topics/Tabs:&nbsp; 
 					<select name="secnumbers">';
-			while ($i<=52) {
+			while ($i<=52) { //use system config here
 				   if ($i == $secnum){
 					   $selected = 'selected = "selected"';
 						}else{
@@ -207,59 +207,36 @@ function solent_number_of_sections(){
 			   
 			echo '  <input type="hidden" name="courseid" value="'. $COURSE->id .'"/>';
 			echo '&nbsp;&nbsp;&nbsp;<input type="submit" value ="Save">
-				 </select></label></form></fieldset><br />';
-		}
-		
-		if ($COURSE->id > 1){
-			//get current option
-			$option = $DB->get_record('theme_header', array('course' => $COURSE->id), '*');
-			$options = array(1, 2, 3, 4);
-//print_r($option);	
-		
-			echo 	'<fieldset class="coursefieldset">
-					<form action="'. $CFG->wwwroot .'/theme/solent2017/set_header_image.php" method="post">
-					<label for "opt">Select header image:&nbsp; 
-					<select name="opt">';	
-					
-						echo '<option value="0">Not selected</option>';
-						foreach($options as $val){
-							echo '<option value="' . $val . '"'; if($val == $option->opt) echo 'selected="selected"'; echo '>Option ' . $val . '</option>';
-						}
-					  
-			   
-			echo '  <input type="hidden" name="course" value="'. $COURSE->id .'"/>';
-			echo '  <input type="hidden" name="id" value="'. $option->id .'"/>';
-			echo '&nbsp;&nbsp;&nbsp;<input type="submit" value ="Save">
 				 </select></label></form></fieldset></div>';
+		
+		
+			if ($COURSE->id > 1){
+				//$unit_category = array(165,175,170,190,207,180,185);
+				//if(in_array($COURSE->category, $unit_category)){
+					//get current option
+					$option = $DB->get_record('theme_header', array('course' => $COURSE->id), '*');
+					$options = array(1, 2, 3, 4);
+				
+					echo 	'<div class="divcoursefieldset"><fieldset class="coursefieldset fieldsetheader">
+							<form action="'. $CFG->wwwroot .'/theme/solent2017/set_header_image.php" method="post">
+							<label for "opt">Select header image:&nbsp; 
+							<select name="opt">';	
+							
+								echo '<option value="0">Not selected</option>';
+								foreach($options as $val){
+									echo '<option value="' . $val . '"'; if($val == $option->opt) echo 'selected="selected"'; echo '>Option ' . $val . '</option>';
+								}
+							  
+					   
+					echo '  <input type="hidden" name="course" value="'. $COURSE->id .'"/>';
+					echo '  <input type="hidden" name="id" value="'. $option->id .'"/>';
+					echo '&nbsp;&nbsp;&nbsp;<input type="submit" value="Save">
+						 </select></label></form></fieldset></div>';
+				//}
+				//echo "</div>";
+			}
 		}
 	}
-}
-
-function solent_header_image(){
-	// global $CFG, $COURSE,$PAGE, $USER;
-	// if ($PAGE->user_is_editing()){
-		// $i = 1;
-		// //$courseformatoptions = course_get_format($COURSE)->get_format_options();
-		// //$secnum = $courseformatoptions['numsections'];
-		// //$oncoursepage = substr($_SERVER['REQUEST_URI'] ,1,11);
-
-		// if ($COURSE->id > 1){
-			// echo 	'<div id = "course-content" style="text-align:center;">
-					// <fieldset id="coursefieldset">
-					// <form action="'. $CFG->wwwroot .'/local/set_header_image.php" method="post">
-					// <span style="white-space:nowrap">
-					// <label for "headerimg">Select header image:&nbsp; </label>
-					// <select name="headerimg">';			
-					   // echo '<option value="">Not selected</option>';
-					   // echo '<option value="1">Option 1</option>';
-					   // echo '<option value="2">Option 2</option>';
-					   // echo '<option value="3">Option 3</option>';
-			   
-			// echo '  <input type="hidden" name="courseid" value="'. $COURSE->id .'"/>';
-			// echo '&nbsp;&nbsp;&nbsp;<input type="submit" value ="save">
-				 // </select></span></form></fieldset></div>	';
-		// }
-	// }
 }
 
 // SSU_AMEND END
