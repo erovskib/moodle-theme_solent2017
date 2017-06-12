@@ -25,6 +25,7 @@ body{
 	font-family: OpenSans, "Trebuchet MS";
 	font-size:14px;
 	line-height:20px;
+	letter-spacing: 0.45px;
 	color:#333;
 	background-color: #f4f4f4 !important;
 	background: #f4f4f4 !important;
@@ -45,7 +46,6 @@ html{
 
 div.course-content p, div.course-content ol, div.course-content li{
 	line-height: 1.75em;
-	letter-spacing: 0.45px;
 }
 
 section#region-main{
@@ -60,7 +60,7 @@ section#region-main{
 }
 
 .h4-solent{
-	letter-spacing: .25em;
+	/* letter-spacing: .25em; */
     text-transform: uppercase;
 	font-size: 18px;
 }
@@ -75,7 +75,9 @@ section#region-main{
 }
 
 /* Sort this lot out */
-
+div.user-enroller-panel{
+	z-index: inherit !important;
+}
 
 
 input, select{
