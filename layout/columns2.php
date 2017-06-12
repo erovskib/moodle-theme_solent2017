@@ -47,7 +47,7 @@ echo $OUTPUT->doctype() ?>
     <nav role="navigation" class="navbar-inner">
         <div class="container-fluid">
 			<div id="brand_container">
-				<a class="brand" href="<?php echo $CFG->wwwroot;?>"><?php echo					
+				<a class="brand fullname" href="<?php echo $CFG->wwwroot;?>"><?php echo					
 					format_string($SITE->fullname, true, array('context' => context_course::instance(SITEID)));
 				?></a>
 				<a class="brand shortname" href="<?php echo $CFG->wwwroot;?>"><?php 
@@ -58,6 +58,7 @@ echo $OUTPUT->doctype() ?>
             <?php echo $OUTPUT->navbar_button(); ?>
 <? // SSU_AMEND START - SSU_USER_MENU ?>
 			<?php echo $OUTPUT->ssu_user_menu(); ?>
+			<?php echo $OUTPUT->navbar_plugin_output(); ?>
 			<?php if(isloggedin() && !isguestuser()){
 				echo "	<div class='nav-collapse collapse'>
 							<div id='searchwrap' class='nav'>
@@ -69,7 +70,7 @@ echo $OUTPUT->doctype() ?>
 						</div>";
 			} ?>
 <? // SSU_AMEND END ?>
-            <?php echo $OUTPUT->navbar_plugin_output(); ?>
+           
             <div class="nav-collapse collapse">
                 <?php echo $OUTPUT->custom_menu(); ?>
                 <ul class="nav pull-right">
