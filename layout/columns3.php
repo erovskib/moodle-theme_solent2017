@@ -56,7 +56,7 @@ echo $OUTPUT->doctype() ?>
     <nav role="navigation" class="navbar-inner">
         <div class="container-fluid">
 			<div id="brand_container">
-					<a class="brand" href="<?php echo $CFG->wwwroot;?>"><?php echo					
+					<a class="brand fullname" href="<?php echo $CFG->wwwroot;?>"><?php echo					
 						format_string($SITE->fullname, true, array('context' => context_course::instance(SITEID)));
 					?></a>
 					
