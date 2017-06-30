@@ -1,15 +1,16 @@
 /* nav-bar CSS
 -------------------------*/
+@import url(https://raw.github.com/FortAwesome/Font-Awesome/master/docs/assets/css/font-awesome.min.css);
 
 .navbar-fixed-top{
-	margin-bottom: 0px;
+	margin-bottom: 0;
 }
 
 @media (max-width: 767px){
 	
 	.navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top {
-		margin-left: 0px;
-		margin-right: 0px;
+		margin-left: 0;
+		margin-right: 0;
 	}
 }
 
@@ -34,12 +35,12 @@
 	}
 	
 	div.nav-collapse > ul.nav, ul.dropdown-menu{
-		padding-top:0px;
-		margin-top:0px;
+		padding-top:0;
+		/* margin-top:0; */
 	}
 	
 	.navbar .nav > li > a {
-		padding: 0px 0px 6px 0px;
+		padding: 0 0 6px 0;
 		margin: 30px 15px 10px;
 		color: rgb(87, 87, 87);
 	}
@@ -65,12 +66,12 @@
 		padding: 10px 20px 10px 12px;
 	}
 	
-	#brand_container > a:nth-child(1){
+	a.brand.fullname{
 		display:block;
 		margin-top: 8px;
 	}
 	
-	#brand_container > a.brand.shortname{
+	a.brand.shortname{
 		display: none;
 	}
 }
@@ -83,11 +84,11 @@
 		padding: 5px 20px 5px 12px;
 	}
 	
-	#brand_container > a:nth-child(1){
+	a.brand.fullname{
 		display:none;		
 	}
 	
-	#brand_container > a.brand.shortname{
+	a.brand.shortname{
 		display: block;
 		font-size: 12pt;
 		line-height: 12pt;
@@ -99,7 +100,7 @@
 	
 	.navbar .brand {
 		padding: 5px 20px 5px 12px;
-		margin-left: 0px;
+		margin-left: 0;
 	}
 
 	span#online{
@@ -111,7 +112,7 @@
 	}	
 	
 	.navbar .btn-navbar {
-		padding: 20px 0px 0px 0px; 		
+		padding: 20px 0 0 0; 		
 	} 
 	
 	.navbar .btn-navbar, .navbar .btn-navbar:hover, .navbar .btn-navbar:focus{
@@ -130,7 +131,7 @@
 		width: 34px;
 		height: 34px;
 		overflow: hidden;
-		margin-right: 0px;
+		margin-right: 0;
 		margin-left: 5px !important;
 	}
 	.navbar .btn-navbar .icon-bar {
@@ -186,10 +187,6 @@
 
 	/* End Burger Menu */
 	
-	h1.headingblock.header.outline {
-		/* margin-left: -5px; */
-	}	
-	
 	.block_course_overview_past.block, .block_course_overview_current.block{
 		padding-left: 5px;
 	}
@@ -207,11 +204,11 @@
 	}
 	
 	.navbar-fixed-top .navbar-inner, .navbar-fixed-bottom .navbar-inner {
-		padding: 0px;
+		padding: 0;
 	}
 	
 	ul.vertical{
-		margin: 0 0 10px 0px;
+		margin: 0 0 10px 0;
 	}
 	
 	.navbar .nav-collapse.in >.nav .dropdown-menu li > a {
@@ -245,20 +242,12 @@
 	}
 	
 	.course-content ul.topics{
-		margin-top: 0px;
-	}
-	
-	.page-wrap{
-		/* padding-top: 15px; */
+		margin-top: 0;
 	}
 	
 	.navbar .nav-collapse.in>.nav>li>a {
 		padding-left: 15px;
 	}
-	
-	/* .navbar-fixed-top .navbar-inner, .navbar-static-top .navbar-inner {
-		padding-bottom: 5px;
-	} */
 }
 
 @media (min-width: 980px){
@@ -268,12 +257,10 @@
 	}
 	
 	.course-content ul.topics{
-		margin-top: 0px;
+		margin-top: 0;
 	}
 	
 	/* Search box */
-	@import url(https://raw.github.com/FortAwesome/Font-Awesome/master/docs/assets/css/font-awesome.min.css);
-
 	div#searchwrap{
 		margin-left: -20px;
 	}
@@ -294,7 +281,7 @@
 		color: #555;
 		padding: 3px;
 		padding-right: 60px;
-		width: 0px;
+		width: 0;
 		position: absolute;
 		right: 0;
 		margin-top: -11px;		
@@ -338,8 +325,8 @@
 		cursor: pointer;
 		opacity: 0.4;
 		cursor: pointer;
-		margin-bottom: 0px;
-		padding:0px;
+		margin-bottom: 0;
+		padding:0;
 		transition: opacity .4s ease;	
 	}
 
@@ -384,15 +371,15 @@
 
 @media (max-width: 767px){		
 	body {
-		padding-left: 0px;
-		padding-right: 0px;
+		padding-left: 0;
+		padding-right: 0;
 	}
 	
 	.navbar .popover-region-toggle img {
 		height: 25px;
 		width: 25px;
-		padding-left: 0px;
-		padding-right: 0px;
+		padding-left: 0;
+		padding-right: 0;
 	}
 }
 
@@ -486,7 +473,7 @@ div.popover.popover-bottom{
 .dropdown-menu, .moodle-actionmenu[data-enhanced].show .menu {
 	background-color: #3a3b3f;
     border-radius: 2px;
-	margin-top: 13px;
+	margin-top: -1px;
 }
 
 .navbar .nav>li>.dropdown-menu:before, .navbar .nav>li>.dropdown-menu:after{
@@ -528,14 +515,14 @@ div.feedback_item_box_left div.feedback_item_label_left, div.feedback_item_box_l
     margin-left: 25px;
 }
 
-ul#action-menu-0-menu > li > a {
+#action-menu-0-menu > li > a {
 	background-color: #3a3b3f;
 	background-image: none; 
 	font-size: 13px;
 	padding-top: 5px;
 	padding-bottom: 5px;
 }
-ul#action-menu-0-menu > li > a:hover, ul#action-menu-0-menu > li > a:focus {
+#action-menu-0-menu > li > a:hover, ul#action-menu-0-menu > li > a:focus {
 	background-color: #2c2d2e;
 	background-image: none; 
 	font-size: 13px;
@@ -543,20 +530,27 @@ ul#action-menu-0-menu > li > a:hover, ul#action-menu-0-menu > li > a:focus {
 	padding-bottom: 5px;
 }
 
-ul#action-menu-0-menu:before{
+#action-menu-0-menu:before{
     display: none; 
 }
 
-ul#action-menu-0-menu:after {
+#action-menu-0-menu:after {
     display: none; 
 }
 
 .jsenabled .usermenu .moodle-actionmenu.show .menu.align-tr-br {
-    margin-top: 21px;
+    /* margin-top: 21px; */
+	top: 60px;
+	margin-top:0;
+}
+
+.jsenabled .usermenu .moodle-actionmenu.show .menu {
+    padding: 5px 10px 0 5px !important;
+    margin: 1px 0 0;
 }
 
 .jsenabled .usermenu .moodle-actionmenu .toggle-display.textmenu {
-    padding-left: 0px;
+    padding-left: 0;
 }
 
 .usermenu .moodle-actionmenu .toggle-display {
@@ -579,7 +573,7 @@ ul#action-menu-0-menu:after {
 }
 
 .usermenu .moodle-actionmenu .toggle-display .userbutton .avatars {
-    margin-right: 0px;
+    margin-right: 0;
 }
 
 .usermenu .moodle-actionmenu .toggle-display .caret {
@@ -608,7 +602,7 @@ div.nav-collapse.collapse > ul.nav > li > a:focus, span.usertext:focus{
 
 .navbar .brand {
 	color: #333;
-	margin-left: 0px;
+	margin-left: 0;
 	font-size:22px;
 	border-left: 2.5pt solid #e20613;
 	font-weight: bold;
@@ -628,7 +622,7 @@ nav.navbar-inner{
 	-webkit-transition: border .5s linear;
 	-moz-transition: border .5s linear;
 	box-shadow: 0 5px 8px rgba(0,0,0,0.15);
-	box-shadow: 0px 2px 7px rgba(100, 100, 100, 0.20);
+	box-shadow: 0 2px 7px rgba(100, 100, 100, 0.20);
 	transition: opacity 0.5s ease-in-out;
 }
 

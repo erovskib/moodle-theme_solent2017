@@ -47,3 +47,30 @@ ul.topics > div.content > div.summary {
     font-style: italic;
 	font-weight:bold;
 }
+
+section.node_category{
+	background-color: #fff;
+}
+
+body#page-user-profile section#region-main{
+	background-color: #EAEAEA;
+}
+
+div.unit_start, a.unit_descriptor, p.unit_descriptor{
+	color: #575757;
+    /* font-size: 14pt; */
+    /* font-weight: bold; */
+}
+
+ul.teachers{
+	margin-left: 25px !important;
+}
+
+.path-mod-assign [data-region="grade-panel"].fullwidth [data-region="grade"]{
+	background-color: #fff;
+	padding: 20px;
+}
+
+.path-mod-assign [data-region="grading-navigation-panel"], .path-mod-assign div.submissionstatus, .path-mod-assign [data-region="grade-actions-panel"]{
+	background-color: #fff;
+}

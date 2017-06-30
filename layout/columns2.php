@@ -56,7 +56,6 @@ echo $OUTPUT->doctype() ?>
 				?></a>
 			</div>
             <?php echo $OUTPUT->navbar_button(); ?>
-<? // SSU_AMEND START - SSU_USER_MENU ?>
 			<?php echo $OUTPUT->ssu_user_menu(); ?>
 			<?php echo $OUTPUT->navbar_plugin_output(); ?>
 			<?php if(isloggedin() && !isguestuser()){
@@ -69,8 +68,8 @@ echo $OUTPUT->doctype() ?>
 							</div>
 						</div>";
 			} ?>
-<? // SSU_AMEND END ?>
-           
+           <?php echo $OUTPUT->search_box(); ?>
+		   
             <div class="nav-collapse collapse">
                 <?php echo $OUTPUT->custom_menu(); ?>
                 <ul class="nav pull-right">

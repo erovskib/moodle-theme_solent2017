@@ -2,22 +2,19 @@
 -------------------------*/
 @font-face {
     font-family: "OpenSans";
-    src: url([[font:theme|OpenSans.eot]]);
-    src: url([[font:theme|OpenSans.eot]]) format('embedded-opentype'),
+    src: url([[font:theme|OpenSans.eot]]); 
+	src: url([[font:theme|OpenSans.eot]]) format('embedded-opentype'),
          url([[font:theme|OpenSans.woff]]) format('woff'),
          url([[font:theme|OpenSans.ttf]]) format('truetype');
-    font-weight: normal;
-    font-style: normal;
+    
 }
 
 @font-face {
-    font-family: "OpenSans";
+    font-family: "OpenSans-Semi";
     src: url([[font:theme|OpenSans-Semibold.eot]]);
-    src: url([[font:theme|OpenSans-Semibold.eot]]) format('embedded-opentype'),
+	src: url([[font:theme|OpenSans-Semibold.eot]]) format('embedded-opentype'),
          url([[font:theme|OpenSans-Semibold.woff]]) format('woff'),
          url([[font:theme|OpenSans-Semibold.ttf]]) format('truetype');
-    font-weight: bold;
-    font-style: normal;
 }
 
 body{
@@ -28,9 +25,7 @@ body{
 	letter-spacing: 0.45px;
 	color:#333;
 	background-color: #f4f4f4 !important;
-	background: #f4f4f4 !important;
-	/* position: relative; */
-	
+	background: #f4f4f4 !important;	
 }
 
 @media (min-width: 980px){
@@ -41,14 +36,14 @@ body{
 
 html{
 	height: 100%;
-	box-sizing: border-box;	
+	/* box-sizing: border-box;	 */
 }
 
 div.course-content p, div.course-content ol, div.course-content li{
 	line-height: 1.75em;
 }
 
-section#region-main{
+#region-main{
 	background-color: #fff;
 }
 
@@ -88,7 +83,7 @@ div#content_hide > section#region-main{
 	display:none;
 }
 
-div#logged_out{
+#logged_out{
 	background-image: url("/theme/solent2017/pix/login.jpg");
 	height: 34.375rem;
 	margin-bottom: -30px;
@@ -102,7 +97,7 @@ div#logged_out{
     margin: 10px auto 10px auto;
 }
 
-div#fullscreenfloat.fullscreen{
+#fullscreenfloat.fullscreen{
 	top:100px;
 }
 

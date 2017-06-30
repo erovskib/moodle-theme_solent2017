@@ -91,7 +91,13 @@ echo $OUTPUT->doctype() ?>
 
 <div class="page-wrap">
 <?php
-if((!isloggedin() || isguestuser()) && $current_url == $CFG->wwwroot . '/index.php'){
+// echo $current_url;
+// echo isloggedin();
+// echo isguestuser();
+// echo $CFG->wwwroot;
+// if($CFG->wwwroot . '/index.php'){echo 'yes';}
+if((!isloggedin() || isguestuser()) && $CFG->wwwroot . '/index.php'){
+//if((!isloggedin() || isguestuser())){
 	echo "<div id='logged_out'>";
 }
 ?>
@@ -120,7 +126,8 @@ if($PAGE->pagelayout == 'course'){
 			<div id="region-main-box" class="<?php echo $regionmainbox; ?>">
 				<div class="row-fluid">
 <?php							
-if((!isloggedin() || isguestuser()) && $current_url == $CFG->wwwroot . '/index.php'){
+if((!isloggedin() || isguestuser()) && $CFG->wwwroot . '/index.php'){
+//if((!isloggedin() || isguestuser())){
 	echo "<div id='content_hide'>";
 }
 ?>	
@@ -129,16 +136,25 @@ if((!isloggedin() || isguestuser()) && $current_url == $CFG->wwwroot . '/index.p
 						// If in course or unit pages categories add the course title elements
 						global $DB;
 							if ( substr ($_SERVER['REQUEST_URI'], 0, 20)  == '/course/view.php?id='){
-							$whichcategory =  $DB->get_record_sql('SELECT name  FROM {course_categories} WHERE '.$COURSE->category.' = mdl_course_categories.id ');
-							 if ($whichcategory->name != "Succeed" ||$whichcategory->name != "CareerBox"){
-								 //include($CFG->dirroot.'/local/course_title_elements.php');
-							 }
+							//$whichcategory =  $DB->get_record_sql('SELECT name  FROM {course_categories} WHERE '.$COURSE->category.' = mdl_course_categories.id ');
+							 // if ($whichcategory->name != "Succeed" ||$whichcategory->name != "CareerBox"){
+							// if ($whichcategory->name == "Unit Pages"){
+								 include($CFG->dirroot.'/local/course_title_elements.php');
+								 // if($COURSE->format == 'onetopic'){
+										// if($COURSE->id != 18863){
+											// echo '<h4 class="learn">Learning materials</h4>';
+										// }else{
+											// echo '<div class="learn-tts"></div>';
+										// }
+								 // }
+							// }
 							}						
 						echo $OUTPUT->main_content();
 						?>
 					</section>
 <?php	
-if((!isloggedin() || isguestuser()) && $current_url == $CFG->wwwroot . '/index.php'){
+if((!isloggedin() || isguestuser()) && $CFG->wwwroot . '/index.php'){
+//if((!isloggedin() || isguestuser())){
 	echo "</div>"; // end content_hide
 }
 ?>
@@ -149,7 +165,8 @@ if((!isloggedin() || isguestuser()) && $current_url == $CFG->wwwroot . '/index.p
 		</div>
 	</div>
 <?php	
-if((!isloggedin() || isguestuser()) && $current_url == $CFG->wwwroot . '/index.php'){
+if((!isloggedin() || isguestuser()) && $CFG->wwwroot . '/index.php'){
+//if((!isloggedin() || isguestuser())){
 	echo "</div>"; //end logged out
 }
 ?>	

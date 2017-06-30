@@ -6,25 +6,43 @@ div#page-navbar-unit{
 }
 
 div#page-navbar-unit.opt1.clearfix{
-	background-image: url("/theme/solent2017/pix/unit-header/solent1.png");
+	background-image: url("/theme/solent2017/pix/unit-header/dark-red-white.png");
 	background-repeat: no-repeat;
 	background-color: #3A3B3F;
 }
 
 div#page-navbar-unit.opt2.clearfix{
-	background-image: url("/theme/solent2017/pix/unit-header/space.jpg");
+	background-image: url("/theme/solent2017/pix/unit-header/dark-orange-gradient.png");
 	background-position: 100% 20%; 
 }
 
 div#page-navbar-unit.opt3.clearfix{
-	background-image: url("/theme/solent2017/pix/unit-header/earth.jpg");
+	background-image: url("/theme/solent2017/pix/unit-header/light-orange-gradient.png");
 }
 
 div#page-navbar-unit.opt4.clearfix{
-	background-image: url("/theme/solent2017/pix/unit-header/tree.jpg");
+	background-image: url("/theme/solent2017/pix/unit-header/light-green-gradient.png");
 	background-repeat: no-repeat;
     background-size: cover;
 }
+
+div#page-navbar-unit.opt5.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/light-green-gradient-invert.png");
+	background-repeat: no-repeat;
+	background-color: #3A3B3F;
+}
+
+/* div#page-navbar-unit.opt6.clearfix{ */
+	/* background-image: url("/theme/solent2017/pix/unit-header/light-or-grad.png"); */
+	/* background-repeat: no-repeat; */
+	/* background-color: #3A3B3F; */
+/* } */
+
+/* div#page-navbar-unit.opt7.clearfix{ */
+	/* background-image: url("/theme/solent2017/pix/unit-header/light-grn-grad.png"); */
+	/* background-repeat: no-repeat; */
+	/* background-color: #eaeaea; */
+/* } */
 
 div#page-navbar-unit.tts.clearfix{
 	background-image: url("/theme/solent2017/pix/unit-header/tts.jpg");
@@ -40,15 +58,17 @@ div#page-navbar-unit.tts.clearfix{
 }
 
 .unit_title{
-	margin: 0 auto;
+	display: inline-block;
     max-width: 1680px;
     color: #fff;
     font-size: 1.875rem;
 	margin-top: 150px;
-    padding-left: 30px;
+    padding-left: 130px;
     line-height: 50px;
 	letter-spacing: .25em;
     text-transform: uppercase;
+	background: rgba(0,0,0,0.40);
+	padding-right: 20px;
 }
 
 /* div#page-navbar-unit.tts.clearfix div.unit_title{ */

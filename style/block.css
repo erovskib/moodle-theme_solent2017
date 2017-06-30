@@ -88,3 +88,43 @@ div.block_login{
     background-color: #fff;
 }
 /* End Course module navigation */
+
+/* Checklist */
+.checklistreport .cell.level0-checked {
+    background-color: #92C027;
+}
+
+.checklist_progress_inner {
+    background-color: #92C027;
+    background-image: none;    
+    box-shadow: 0 0 4px #229b15;
+    border-radius: 2px;
+}
+
+.checklist_progress_outer {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #333;
+    border-radius: 2px;
+}
+
+ol.checklist{
+	margin-bottom: 10px;
+}
+
+ol.checklist li {
+    margin-bottom: 5px;
+}
+
+ol.checklist select{
+	margin-right: 5px;
+}
+
+ol.checklist input[type="checkbox"]{
+	margin-top: 0.5px;
+}
+
+ol.checklist img{
+	margin-right: 5px;
+}
+

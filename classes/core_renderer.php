@@ -490,12 +490,16 @@ class theme_solent2017_core_renderer extends theme_bootstrapbase_core_renderer {
 
 		$html = html_writer::start_tag('header', array('id'=>'page-header-unit', 'class'=>'clearfix'));
         $html .= $this->context_header();
-		if($COURSE->id == 22853 || $COURSE->id == 22854){
+		if($COURSE->id == 18863 || $COURSE->id == 22854){
 			$html .= html_writer::start_div('clearfix', array('id'=>'page-navbar-unit', 'class'=>'tts'));
 		}else{
 			$html .= html_writer::start_div('clearfix', array('id'=>'page-navbar-unit', 'class'=>'opt'.$opt));
 		}
-		$html .= html_writer::start_div('unit_title') . $COURSE->fullname . html_writer::end_div();
+		$html .= html_writer::start_div('unit_title_container');
+		$coursenamearray = explode("(Start", $COURSE->fullname, 2);
+		$coursename = $coursenamearray[0];
+		$html .= html_writer::start_div('unit_title') . $coursename . html_writer::end_div();
+        $html .= html_writer::end_div();
         $html .= html_writer::end_div();
         $html .= html_writer::end_tag('header');
         return $html; 
@@ -504,7 +508,7 @@ class theme_solent2017_core_renderer extends theme_bootstrapbase_core_renderer {
 	public function breadcrumbs_ssu() {
 		$html = html_writer::start_tag('header', array('id' => 'page-header-crumbs', 'class' => 'clearfix'));
         $html .= $this->context_header();
-        $html .= html_writer::start_div('clearfix', array('id' => 'page-navbar-crumbs'));
+        $html .= html_writer::start_div('clearfix', array('id' => 'page-navbar'));
         $html .= html_writer::tag('div', $this->navbar(), array('class' => 'breadcrumb-nav'));
 		$html .= html_writer::div($this->page_heading_button(), 'breadcrumb-button');
         $html .= html_writer::end_tag('header');

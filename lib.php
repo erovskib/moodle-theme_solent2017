@@ -215,7 +215,13 @@ function solent_number_of_sections(){
 				//if(in_array($COURSE->category, $unit_category)){
 					//get current option
 					$option = $DB->get_record('theme_header', array('course' => $COURSE->id), '*');
-					$options = array(1, 2, 3, 4);
+					// $options = array(1, 2, 3, 4);
+					$options = array(	1=>'Red and white solid circles',
+										2=>'Dark orange gradient circles',
+										3=>'Light orange gradient circles',
+										4=>'Light green gradient circles',
+										5=>'Light green gradient inverted circles'
+									);
 				
 					echo 	'<div class="divcoursefieldset"><fieldset class="coursefieldset fieldsetheader">
 							<form action="'. $CFG->wwwroot .'/theme/solent2017/set_header_image.php" method="post">
@@ -223,8 +229,8 @@ function solent_number_of_sections(){
 							<select name="opt">';	
 							
 								echo '<option value="0">Not selected</option>';
-								foreach($options as $val){
-									echo '<option value="' . $val . '"'; if($val == $option->opt) echo 'selected="selected"'; echo '>Option ' . $val . '</option>';
+								foreach($options as $key=>$val){
+									echo '<option value="' . $key . '"'; if($key == $option->opt) echo 'selected="selected"'; echo '>' . $val . '</option>';
 								}
 							  
 					   

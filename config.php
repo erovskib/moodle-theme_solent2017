@@ -38,7 +38,7 @@ $THEME->name = 'solent2017';
 //
 $THEME->doctype = 'html5';
 $THEME->parents = array('bootstrapbase');
-$THEME->sheets = array('custom', 'main', 'nav', 'inputs-links', 'media', 'course', 'block', 'footer', 'book', 'unit-header');
+$THEME->sheets = array('custom','main','nav','inputs-links','media','course','block','footer','mod','unit-header','tabs');
 $THEME->yuicssmodules = array();
 $THEME->enable_dock = false;
 $THEME->editor_sheets = array();
