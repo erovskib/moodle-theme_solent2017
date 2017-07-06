@@ -91,13 +91,7 @@ echo $OUTPUT->doctype() ?>
 
 <div class="page-wrap">
 <?php
-// echo $current_url;
-// echo isloggedin();
-// echo isguestuser();
-// echo $CFG->wwwroot;
-// if($CFG->wwwroot . '/index.php'){echo 'yes';}
 if((!isloggedin() || isguestuser()) && $CFG->wwwroot . '/index.php'){
-//if((!isloggedin() || isguestuser())){
 	echo "<div id='logged_out'>";
 }
 ?>
@@ -127,7 +121,6 @@ if($PAGE->pagelayout == 'course'){
 				<div class="row-fluid">
 <?php							
 if((!isloggedin() || isguestuser()) && $CFG->wwwroot . '/index.php'){
-//if((!isloggedin() || isguestuser())){
 	echo "<div id='content_hide'>";
 }
 ?>	
@@ -154,7 +147,6 @@ if((!isloggedin() || isguestuser()) && $CFG->wwwroot . '/index.php'){
 					</section>
 <?php	
 if((!isloggedin() || isguestuser()) && $CFG->wwwroot . '/index.php'){
-//if((!isloggedin() || isguestuser())){
 	echo "</div>"; // end content_hide
 }
 ?>
@@ -166,18 +158,14 @@ if((!isloggedin() || isguestuser()) && $CFG->wwwroot . '/index.php'){
 	</div>
 <?php	
 if((!isloggedin() || isguestuser()) && $CFG->wwwroot . '/index.php'){
-//if((!isloggedin() || isguestuser())){
 	echo "</div>"; //end logged out
 }
 ?>	
 </div><!-- end wrapper-->	
-	<footer class="site-footer" id="page-footer">
-		<!--<div id="course-footer"><?php //echo $OUTPUT->course_footer(); ?></div>-->
+	<footer class="site-footer" id="page-footer">		
 		<?php include($CFG->dirroot.'/theme/solent2017/layout/footer.php'); ?>
 	</footer>
-
 		<?php echo $OUTPUT->standard_end_of_body_html() ?>
-
 </div>
 </body>
 </html>
