@@ -1,0 +1,38 @@
+
+.succeed_link{width:100%;border:none; height:28px;}
+.succeed_link-col1{position:relative;float:left;width:34px;height:28px;background-image:url("/mod/book/pix/succeed_quiz-sq.jpg"); background-repeat:no-repeat; background-position:center;} 
+.succeed_link-col2{position:relative;float:left;height:28px; line-height:28px;  color:#333;} 
+
+.succeed_alert{background-color:#CFE4E4; width:100%;min-height:100px;}
+.succeed_alert ul {margin-left: 35px;}
+.succeed_alert-col1{width:34px;background-image:url("/mod/book/pix/succeed_remember-bg.jpg"); background-repeat:no-repeat;background-position:center top; margin:10px;} 
+.succeed_alert-col2{padding:10px; padding-top:17px;} 
+
+.succeed_style {}
+.succeed_style tr td {border:solid thin #e0dfdf; vertical-align:top;}
+.succeed_title{background-color:#cccccc;padding:10px; font-weight:700; }
+.succeed_content{background-color:#f3f3f3;} 
+
+.succeed_download{width:100%;border:none; height:28px;}
+.succeed_download_c1{float:left;width:34px;height:28px;background-image:url("/mod/book/pix/succeed_download-sq.jpg"); background-repeat:no-repeat; background-position:center;} 
+.succeed_download_c2{position:relative;float:left;height:28px; line-height:28px;  color:#333;} 
+
+
+.succeed_web{width:100%;border:none; height:28px;}
+.succeed_web-col1{position:relative;float:left;width:34px;height:28px;background-image:url("/mod/book/pix/succeed_web-sq.jpg"); background-repeat:no-repeat; background-position:center;} 
+.succeed_web-col2{position:relative;float:left;height:28px; line-height:28px;  color:#333;} 
+
+.path-mod-book .block_book_toc li {
+    clear: both;
+    list-style: none;
+	margin-top: 1px;
+}
+
+.path-mod-book .book_toc_bullets ul ul {
+    margin-left: 40px;
+}
+
+div.editor_atto button:hover{
+	border: none;
+}
+	

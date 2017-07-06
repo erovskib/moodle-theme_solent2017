@@ -1,0 +1,107 @@
+@media screen and (max-width: 480px){
+	h4.learn{
+		display: none;
+	}
+}
+
+@media screen and (min-width: 481px){
+
+	.nav-tabs {
+		border-bottom: none;
+	}
+	
+	.single-section.onetopic ul.nav.nav-tabs{
+		margin-bottom: 0px;
+		margin-top: 15px;
+		min-height: 0;
+	}
+	
+	.nav-tabs > li > a {		
+		border: none;		
+	}
+	
+	ul.nav {
+		font-weight: normal;
+	}
+
+	body#page-course-view-onetopic section#region-main{
+		background-color: #EAEAEA;
+	}
+	
+	body#page-course-view-onetopic div.content{
+		padding-left: 10px;
+	}
+	
+	h4.learn{
+		color: #575757;
+	}
+	
+	div.learn-tts{
+		padding-top:40px;
+	}
+
+	ul.nav.nav-tabs li{
+		/* background-color: #C2C2C2; */
+		background-color: #bdbdbd;
+		margin: 0px 3px 0px 0px;
+		color: #fff;
+		border-radius: 4px 4px 0 0;		
+		border-top: 1px solid #EAEAEA;
+
+	}
+
+	ul.topics{
+		background-color: #fff;
+	}
+
+	ul.nav.nav-tabs li a{
+		color: #fff;
+	}
+
+	ul.nav.nav-tabs li a:hover{
+		color: #000;
+		border-color: #ddd;
+		background-color: #EAEAEA;
+		/* border-bottom: none; */
+	}
+
+	.nav-tabs > li > a, .nav-pills > li > a {   
+		margin-right: 0px;   
+	}
+
+	.nav-tabs > .active > a, .nav-tabs > .active > a:hover, .nav-tabs > .active > a:focus {
+		border: none;
+	}
+	
+	ul.nav.nav-tabs > li.active{
+		/* min-height: 37px; */
+		background-color: #fff;
+	}
+	
+	ul.nav.nav-tabs > li.active a {
+		color: #000;
+		min-height: 20px;
+		/* border-bottom: 1px solid #fff; */
+	}
+	
+	ul.nav.nav-tabs > li.active a:hover {
+		min-height: 20px;
+	}
+	
+	div.activityinstance{
+		padding-left:20px;
+	}
+	
+	div.contentafterlink{
+		padding-left: 20px;
+		margin-left: 0px;
+	}
+	
+	.format-onetopic ul.nav-tabs li a .tab_content.dimmed {
+		color: #000;
+	}
+	
+	.course-content .single-section .section-navigation {    
+		margin-bottom: 0.5em;
+	}
+}
