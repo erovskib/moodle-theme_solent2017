@@ -211,11 +211,10 @@ function solent_number_of_sections(){
 		
 		
 			if ($COURSE->id > 1){
-				//$unit_category = array(165,175,170,190,207,180,185);
-				//if(in_array($COURSE->category, $unit_category)){
+				$unit_category = array(165,175,170,190,207,180,185);
+				if(in_array($COURSE->category, $unit_category)){
 					//get current option
-					$option = $DB->get_record('theme_header', array('course' => $COURSE->id), '*');
-					// $options = array(1, 2, 3, 4);
+					$option = $DB->get_record('theme_header', array('course' => $COURSE->id), '*');					
 					$options = array(	1=>'Red and white solid circles',
 										2=>'Dark orange gradient circles',
 										3=>'Light orange gradient circles',
@@ -238,7 +237,7 @@ function solent_number_of_sections(){
 					echo '  <input type="hidden" name="id" value="'. $option->id .'"/>';
 					echo '&nbsp;&nbsp;&nbsp;<input type="submit" value="Save">
 						 </select></label></form></fieldset></div>';
-				//}
+				}
 				//echo "</div>";
 			}
 		}
