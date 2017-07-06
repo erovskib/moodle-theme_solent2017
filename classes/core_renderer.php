@@ -486,23 +486,25 @@ class theme_solent2017_core_renderer extends theme_bootstrapbase_core_renderer {
         // $html .= html_writer::tag('div', $this->course_header(), array('id' => 'course-header'));
         // $html .= html_writer::end_tag('header');
         // return $html;
-
-
-		$html = html_writer::start_tag('header', array('id'=>'page-header-unit', 'class'=>'clearfix'));
-        $html .= $this->context_header();
-		if($COURSE->id == 18863 || $COURSE->id == 22854){
-			$html .= html_writer::start_div('clearfix', array('id'=>'page-navbar-unit', 'class'=>'tts'));
-		}else{
-			$html .= html_writer::start_div('clearfix', array('id'=>'page-navbar-unit', 'class'=>'opt'.$opt));
+		
+		$unit_category = array(165,175,170,190,207,180,185);
+		if(in_array($COURSE->category, $unit_category)){
+			$html = html_writer::start_tag('header', array('id'=>'page-header-unit', 'class'=>'clearfix'));
+			$html .= $this->context_header();
+			if($COURSE->id == 18863 || $COURSE->id == 22854){
+				$html .= html_writer::start_div('clearfix', array('id'=>'page-navbar-unit', 'class'=>'tts'));
+			}else{
+				$html .= html_writer::start_div('clearfix', array('id'=>'page-navbar-unit', 'class'=>'opt'.$opt));
+			}
+			$html .= html_writer::start_div('unit_title_container');
+			$coursenamearray = explode("(Start", $COURSE->fullname, 2);
+			$coursename = $coursenamearray[0];
+			$html .= html_writer::start_div('unit_title') . $coursename . html_writer::end_div();
+			$html .= html_writer::end_div();
+			$html .= html_writer::end_div();
+			$html .= html_writer::end_tag('header');
+			return $html; 
 		}
-		$html .= html_writer::start_div('unit_title_container');
-		$coursenamearray = explode("(Start", $COURSE->fullname, 2);
-		$coursename = $coursenamearray[0];
-		$html .= html_writer::start_div('unit_title') . $coursename . html_writer::end_div();
-        $html .= html_writer::end_div();
-        $html .= html_writer::end_div();
-        $html .= html_writer::end_tag('header');
-        return $html; 
     }
 
 	public function breadcrumbs_ssu() {
