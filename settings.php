@@ -81,4 +81,41 @@ if ($ADMIN->fulltree) {
     $setting = new admin_setting_confightmleditor($name, $title, $description, $default);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $settings->add($setting);
+	
+	// Current schools
+    $name = 'theme_solent2017/schools';
+    $title = get_string('schools', 'theme_solent2017');
+    $description = get_string('schoolsdesc', 'theme_solent2017');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $settings->add($setting);
+
+	// Current units
+    $name = 'theme_solent2017/units';
+    $title = get_string('units', 'theme_solent2017');
+    $description = get_string('unitsdesc', 'theme_solent2017');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $settings->add($setting);
+	
+	// Succeed@Solent ID
+    $name = 'theme_solent2017/succeed';
+    $title = get_string('succeed', 'theme_solent2017');
+    $description = get_string('succeeddesc', 'theme_solent2017');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $settings->add($setting);
+
+	// Teach to Succeed@Solent ID
+    $name = 'theme_solent2017/teach';
+    $title = get_string('teach', 'theme_solent2017');
+    $description = get_string('teachdesc', 'theme_solent2017');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $settings->add($setting);	
+
 }
