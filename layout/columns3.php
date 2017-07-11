@@ -36,7 +36,6 @@ $regionmain = 'span8 pull-right';
 $sidepre = 'span4 desktop-first-column';
 $sidepost = 'span3 pull-right';
 
-$current_url = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'];
 $this->page->requires->js_call_amd('theme_solent2017/border', 'init', array());
 
 echo $OUTPUT->doctype() ?>
@@ -98,24 +97,15 @@ if((!isloggedin() || isguestuser()) && $CFG->wwwroot . '/index.php'){
 
 <?php 
 global $COURSE;
-$unit_category = array(165,175,170,190,207,180,185);
-if($PAGE->pagelayout == 'course'){
-	//if(in_array($COURSE->category, $unit_category)){
-		echo $OUTPUT->full_header_ssu();
-		echo $OUTPUT->breadcrumbs_ssu();
-	//}else{
-		//echo $OUTPUT->full_header();
-	//}		
+if($COURSE->format == 'onetopic' && $PAGE->pagelayout == 'course'){
+	echo $OUTPUT->full_header_ssu();
+	echo $OUTPUT->breadcrumbs_ssu();
+}else{
+	echo $OUTPUT->full_header();
 }
 ?>
 	<div id="page" class="container-fluid">
-		<?php 
-		if($PAGE->pagelayout != 'course'){
-		//if($PAGE->pagelayout != 'course' || !in_array($COURSE->category, $unit_category)){
-			echo $OUTPUT->full_header(); 
-		}	
-		echo solent_number_of_sections();
-		?>
+		<?php echo solent_number_of_sections();	?>
 		<div id="page-content" class="row-fluid">
 			<div id="region-main-box" class="<?php echo $regionmainbox; ?>">
 				<div class="row-fluid">

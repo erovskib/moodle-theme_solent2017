@@ -433,7 +433,7 @@ class theme_solent2017_core_renderer extends theme_bootstrapbase_core_renderer {
         }
 
         $breadcrumbs = array();
-        foreach ($items as $item) {			
+        foreach ($items as $item) {	
             $item->hideicon = true;					
 			if($item->type == 20){
 				$text = substr($item->text, 0, strpos($item->text, "_"));				

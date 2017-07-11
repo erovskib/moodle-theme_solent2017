@@ -211,8 +211,7 @@ function solent_number_of_sections(){
 		
 		
 			if ($COURSE->id > 1){
-				$unit_category = array(165,175,170,190,207,180,185);
-				if(in_array($COURSE->category, $unit_category)){
+				if($COURSE->format == 'onetopic'){
 					//get current option
 					$option = $DB->get_record('theme_header', array('course' => $COURSE->id), '*');					
 					$options = array(	1=>'Red and white solid circles',
@@ -227,18 +226,16 @@ function solent_number_of_sections(){
 							<label for "opt">Select header image:&nbsp; 
 							<select name="opt">';	
 							
-								echo '<option value="0">Not selected</option>';
-								foreach($options as $key=>$val){
-									echo '<option value="' . $key . '"'; if($key == $option->opt) echo 'selected="selected"'; echo '>' . $val . '</option>';
-								}
-							  
+					echo '<option value="0">Not selected</option>';
+					foreach($options as $key=>$val){
+						echo '<option value="' . $key . '"'; if($key == $option->opt) echo 'selected="selected"'; echo '>' . $val . '</option>';
+					}							  
 					   
 					echo '  <input type="hidden" name="course" value="'. $COURSE->id .'"/>';
 					echo '  <input type="hidden" name="id" value="'. $option->id .'"/>';
 					echo '&nbsp;&nbsp;&nbsp;<input type="submit" value="Save">
 						 </select></label></form></fieldset></div>';
 				}
-				//echo "</div>";
 			}
 		}
 	}
@@ -321,6 +318,7 @@ function enrol_get_current_courses($fields = NULL, $sort = 'visible DESC,sortord
 	$params['now1']    = round(time(), -2); // improves db caching
 	$params['now2']    = $params['now1'];
 	$courses = $DB->get_records_sql($sql, $params, 0, $limit);
+	
 	// preload contexts and check visibility
 	foreach ($courses as $id=>$course) {
 		context_helper::preload_from_record($course);
@@ -339,3 +337,4 @@ function enrol_get_current_courses($fields = NULL, $sort = 'visible DESC,sortord
 	//wow! Is that really all? :-D
 	return $courses;
 }
+
