@@ -93,7 +93,7 @@ div.divcoursefieldset{
 	text-align: center;
 }
 
-header#page-header-crumbs{
+header#page-header-crumbs, header#page-header{
 	margin: 0 auto;
     max-width: 1680px;
 }
