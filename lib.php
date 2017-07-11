@@ -301,6 +301,7 @@ function enrol_get_current_courses($fields = NULL, $sort = 'visible DESC,sortord
 	//note: we can not use DISTINCT + text fields due to Oracle and MS limitations, that is why we have the subselect there
 // SSU_AMEND START - BOOKMARKS
 // Edit course parent categories each year to show past courses (opposite of current block)
+	$settings = get_config('theme_solent2017');
 	$sql = "SELECT $coursefields $ccselect
 			  FROM {course} c
 			  JOIN (SELECT DISTINCT e.courseid
@@ -311,7 +312,7 @@ function enrol_get_current_courses($fields = NULL, $sort = 'visible DESC,sortord
 		   $ccjoin
 			  JOIN {course_categories} cc ON c.category = cc.id
 			 WHERE $wheres
-			 AND cc.parent IN  (23, 156, 158, 157, 161, 201, 159, 160)
+			 AND cc.parent IN ( $settings->schools )
 		  $orderby";
 // SSU_AMEND END
 	$params['userid']  = $USER->id;

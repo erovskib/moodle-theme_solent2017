@@ -356,8 +356,8 @@ class theme_solent2017_core_renderer extends theme_bootstrapbase_core_renderer {
 					// <form id='coursesearch' action='/course/search.php' method='get'><input type='text' id='coursesearchbox' name='search'><input id='coursesearchgo' type='submit'></form>
 					// ";			
 			
-			$value = get_user_preferences('course_overview_current_course_sortorder');
-			
+			$value = get_user_preferences('course_overview_current_course_order');
+
 			if($value){
 				$courses = $DB->get_records_sql('SELECT * FROM {course} WHERE id IN (' . $value . ') ORDER BY FIND_IN_SET(id, \'' . $value . '\') LIMIT 20');
 			}else{
@@ -443,7 +443,12 @@ class theme_solent2017_core_renderer extends theme_bootstrapbase_core_renderer {
 				$breadcrumbs[] = $this->render($item);
 			}
 			
-			$schools = array(156, 158, 157, 161, 201, 159, 160, 193, 200, 202, 203, 77);
+			$settings = get_config('theme_solent2017');
+			
+			if(isset($settings->schools)){
+				$schools = explode(",", $settings->schools);
+			}
+
 			if($item->type == 10){
 				if(in_array($item->key, $schools)){
 					$breadcrumbs[] = $this->render($item);
@@ -487,11 +492,12 @@ class theme_solent2017_core_renderer extends theme_bootstrapbase_core_renderer {
         // $html .= html_writer::end_tag('header');
         // return $html;
 		
-		$unit_category = array(165,175,170,190,207,180,185);
-		if(in_array($COURSE->category, $unit_category)){
+		$settings = get_config('theme_solent2017');
+
+		if($COURSE->format == 'onetopic'){
 			$html = html_writer::start_tag('header', array('id'=>'page-header-unit', 'class'=>'clearfix'));
 			$html .= $this->context_header();
-			if($COURSE->id == 18863 || $COURSE->id == 22854){
+			if($COURSE->id == $settings->teach || $COURSE->id == $settings->succeed){
 				$html .= html_writer::start_div('clearfix', array('id'=>'page-navbar-unit', 'class'=>'tts'));
 			}else{
 				$html .= html_writer::start_div('clearfix', array('id'=>'page-navbar-unit', 'class'=>'opt'.$opt));

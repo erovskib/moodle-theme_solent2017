@@ -21,6 +21,8 @@
  * @copyright 2013 Moodle, moodle.org
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
+$string['categoryrestrict'] = 'Current school categories';
+$string['categoryrestrictdesc'] = 'Comma separated list of school categories for current pages bookmarks in menu';
 
 $string['choosereadme'] = '
 <div class="clearfix">
@@ -64,8 +66,20 @@ $string['pluginname'] = 'solent2017';
 $string['region-side-post'] = 'Right';
 $string['region-side-pre'] = 'Left';
 
+$string['schools'] = 'School categories';
+$string['schoolsdesc'] = 'For restrictions on schools';
+
 $string['sitelogo'] = 'Site logo';
 $string['sitename'] = 'Display site name along with small logo';
 $string['sitenamedesc'] = 'If there is no small logo, the site name is always displayed in the navigation bar. If a small logo is set, it may be displayed with or without the site name.';
 $string['smalllogo'] = 'Small logo';
 $string['smalllogodesc'] = 'The small logo is displayed in the navigation bar. If there is a header logo for the front page and login page, the small logo is not displayed on these pages. If a logo is not added here, the compact logo in Appearance > Logos will be used.';
+
+$string['succeed'] = 'Succeed@Solent ID';
+$string['succeeddesc'] = 'For displaying correct header image';
+
+$string['teach'] = 'Teach to Succeed@Solent ID';
+$string['teachdesc'] = 'For displaying correct header image';
+
+$string['units'] = 'Unit categories';
+$string['unitsdesc'] = 'For restrictions on units';
