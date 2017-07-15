@@ -5,50 +5,326 @@ div#page-navbar-unit{
 	margin-bottom: 10px;	
 }
 
-div#page-navbar-unit.opt1.clearfix{
-	background-image: url("/theme/solent2017/pix/unit-header/dark-red-white.png");
+div#page-navbar-unit.opt01.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/01.png");
+	background-repeat: no-repeat;
+	background-color: #EAEAEA;
+}
+div#page-navbar-unit.opt02.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/02.png");
+	background-repeat: no-repeat;
+	background-color: #EAEAEA; 
+}
+div#page-navbar-unit.opt03.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/03.png");
+	background-repeat: no-repeat;
+	background-color: #EAEAEA;
+}
+div#page-navbar-unit.opt04.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/04.png");
+	background-repeat: no-repeat;
+	background-color: #EAEAEA;
+}
+div#page-navbar-unit.opt05.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/05.png");
+	background-repeat: no-repeat;
+	background-color: #EAEAEA;
+}
+div#page-navbar-unit.opt06.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/06.png");
+	background-repeat: no-repeat;
+	background-color: #EAEAEA;
+}
+div#page-navbar-unit.opt07.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/07.png");
+	background-repeat: no-repeat;
+	background-color: #EAEAEA;
+}
+div#page-navbar-unit.opt08.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/08.png");
+	background-repeat: no-repeat;
+	background-color: #EAEAEA;
+}div#page-navbar-unit.opt09.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/09.png");
+	background-repeat: no-repeat;
+	background-color: #EAEAEA;
+}
+div#page-navbar-unit.opt10.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/10.png");
+	background-repeat: no-repeat;
+	background-color: #EAEAEA;
+}
+div#page-navbar-unit.opt11.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/11.png");
+	background-repeat: no-repeat;
+	background-color: #EAEAEA;
+}
+div#page-navbar-unit.opt12.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/12.png");
+	background-repeat: no-repeat;
+	background-color: #EAEAEA;
+}
+div#page-navbar-unit.opt13.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/13.png");
+	background-repeat: no-repeat;
+	background-color: #EAEAEA;
+}
+div#page-navbar-unit.opt14.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/14.png");
 	background-repeat: no-repeat;
 	background-color: #3A3B3F;
 }
-
-div#page-navbar-unit.opt2.clearfix{
-	background-image: url("/theme/solent2017/pix/unit-header/dark-orange-gradient.png");
-	background-position: 100% 20%; 
+div#page-navbar-unit.opt15.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/15.png");
+	background-repeat: no-repeat;
+	background-color: #3A3B3F;
 }
-
-div#page-navbar-unit.opt3.clearfix{
-	background-image: url("/theme/solent2017/pix/unit-header/light-orange-gradient.png");
+div#page-navbar-unit.opt16.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/16.png");
+	background-repeat: no-repeat;
+	background-color: #3A3B3F; 
 }
-
-div#page-navbar-unit.opt4.clearfix{
-	background-image: url("/theme/solent2017/pix/unit-header/light-green-gradient.png");
+div#page-navbar-unit.opt17.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/17.png");
+	background-repeat: no-repeat;
+	background-color: #3A3B3F;
+}
+div#page-navbar-unit.opt18.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/18.png");
+	background-repeat: no-repeat;
+	background-color: #3A3B3F;
+}
+div#page-navbar-unit.opt19.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/19.png");
+	background-repeat: no-repeat;
+	background-color: #3A3B3F;
+}
+div#page-navbar-unit.opt20.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/20.png");
+	background-repeat: no-repeat;
+	background-color: #3A3B3F;
+}
+div#page-navbar-unit.opt21.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/21.png");
+	background-repeat: no-repeat;
+	background-color: #3A3B3F;
+}
+div#page-navbar-unit.opt22.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/22.png");
+	background-repeat: no-repeat;
+	background-color: #3A3B3F;
+}
+div#page-navbar-unit.opt23.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/23.png");
+	background-repeat: no-repeat;
+	background-color: #3A3B3F;
+}
+div#page-navbar-unit.opt24.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/24.png");
+	background-repeat: no-repeat;
+	background-color: #3A3B3F;
+}
+div#page-navbar-unit.opt25.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/25.png");
+	background-repeat: no-repeat;
+	background-color: #3A3B3F;
+}
+div#page-navbar-unit.opt26.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/26.png");
+	background-repeat: no-repeat;
+	background-color: #3A3B3F;
+}
+div#page-navbar-unit.opt27.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/27.png");
+	background-repeat: no-repeat;
+	background-color: #3A3B3F;
+}
+div#page-navbar-unit.opt28.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/28.png");
+	background-repeat: no-repeat;
+	background-color: #3A3B3F;
+}
+div#page-navbar-unit.opt29.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/29.png");
+	background-repeat: no-repeat;
+	background-color: #3A3B3F;
+}
+div#page-navbar-unit.opt30.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/30.png");
+	background-repeat: no-repeat;
+	background-color: #3A3B3F;
+}
+div#page-navbar-unit.opt31.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/31.png");
+	background-repeat: no-repeat;
+	background-color: #3A3B3F;
+}
+div#page-navbar-unit.opt32.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/32.png");
+	background-repeat: no-repeat;
+	background-color: #3A3B3F;
+}
+div#page-navbar-unit.opt33.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/33.png");
+	background-repeat: no-repeat;
+	background-color: #3A3B3F;
+}
+div#page-navbar-unit.opt34.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/34.png");
+	background-repeat: no-repeat;
+	background-color: #3A3B3F;
+}
+div#page-navbar-unit.opt35.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/35.png");
+	background-repeat: no-repeat;
+	background-color: #3A3B3F;
+}
+div#page-navbar-unit.opt36.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/36.png");
+	background-repeat: no-repeat;
+	background-color: #3A3B3F;
+}
+/* Images */
+div#page-navbar-unit.op50.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/50.png");
 	background-repeat: no-repeat;
     background-size: cover;
 }
-
-div#page-navbar-unit.opt5.clearfix{
-	background-image: url("/theme/solent2017/pix/unit-header/light-green-gradient-invert.png");
+div#page-navbar-unit.op51.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/51.png");
 	background-repeat: no-repeat;
-	background-color: #3A3B3F;
+    background-size: cover;
 }
-
-/* div#page-navbar-unit.opt6.clearfix{ */
-	/* background-image: url("/theme/solent2017/pix/unit-header/light-or-grad.png"); */
-	/* background-repeat: no-repeat; */
-	/* background-color: #3A3B3F; */
-/* } */
-
-/* div#page-navbar-unit.opt7.clearfix{ */
-	/* background-image: url("/theme/solent2017/pix/unit-header/light-grn-grad.png"); */
-	/* background-repeat: no-repeat; */
-	/* background-color: #eaeaea; */
-/* } */
+div#page-navbar-unit.op52.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/52.png");
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+div#page-navbar-unit.op53.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/53.png");
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+div#page-navbar-unit.op54.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/54.png");
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+div#page-navbar-unit.op55.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/55.png");
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+div#page-navbar-unit.op56.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/56.png");
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+div#page-navbar-unit.op57.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/57.png");
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+div#page-navbar-unit.op58.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/58.png");
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+div#page-navbar-unit.op59.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/59.png");
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+div#page-navbar-unit.opt60.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/60.png");
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+div#page-navbar-unit.opt61.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/61.png");
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+div#page-navbar-unit.opt62.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/62.png");
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+div#page-navbar-unit.opt63.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/63.png");
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+div#page-navbar-unit.opt64.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/64.png");
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+div#page-navbar-unit.opt65.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/65.png");
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+div#page-navbar-unit.opt66.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/66.png");
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+div#page-navbar-unit.opt67.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/67.png");
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+div#page-navbar-unit.opt68.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/68.png");
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+div#page-navbar-unit.opt69.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/69.png");
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+div#page-navbar-unit.opt70.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/70.png");
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+div#page-navbar-unit.opt71.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/71.png");
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+div#page-navbar-unit.opt72.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/72.png");
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+div#page-navbar-unit.opt73.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/73.png");
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+div#page-navbar-unit.opt74.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/74.png");
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+div#page-navbar-unit.opt75.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/75.png");
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+div#page-navbar-unit.opt76.clearfix{
+	background-image: url("/theme/solent2017/pix/unit-header/76.png");
+	background-repeat: no-repeat;
+    background-size: cover;
+}
 
 div#page-navbar-unit.tts.clearfix{
 	background-image: url("/theme/solent2017/pix/unit-header/tts.jpg");
 	background-repeat: no-repeat;
     background-size: cover;
-	/* height:250px; */
 }
 
 @media (max-width: 1699px){

@@ -213,14 +213,18 @@ function solent_number_of_sections(){
 			if ($COURSE->id > 1){
 				if($COURSE->format == 'onetopic'){
 					//get current option
-					$option = $DB->get_record('theme_header', array('course' => $COURSE->id), '*');					
-					$options = array(	1=>'Red and white solid circles',
-										2=>'Dark orange gradient circles',
-										3=>'Light orange gradient circles',
-										4=>'Light green gradient circles',
-										5=>'Light green gradient inverted circles'
-									);
-				
+					$option = $DB->get_record('theme_header', array('course' => $COURSE->id), '*');	
+					$dir = dirname(__FILE__).'/pix/unit-header';
+					$files = scandir($dir);
+					array_splice($files, 0, 1);
+					array_splice($files, 0, 1);					
+			
+					$options = array();
+					foreach ($files as $k=>$v) {
+						$img = substr($v, 0, strpos($v, "."));
+						$options[$img] = $img;						
+					}
+
 					echo 	'<div class="divcoursefieldset"><fieldset class="coursefieldset fieldsetheader">
 							<form action="'. $CFG->wwwroot .'/theme/solent2017/set_header_image.php" method="post">
 							<label for "opt">Select header image:&nbsp; 
@@ -299,6 +303,11 @@ function enrol_get_current_courses($fields = NULL, $sort = 'visible DESC,sortord
 // SSU_AMEND START - BOOKMARKS
 // Edit course parent categories each year to show past courses (opposite of current block)
 	$settings = get_config('theme_solent2017');
+	if($settings->schools){
+		$and = "AND cc.parent IN ( $settings->schools )";
+	}else{
+		$and = "";
+	}
 	$sql = "SELECT $coursefields $ccselect
 			  FROM {course} c
 			  JOIN (SELECT DISTINCT e.courseid
@@ -309,7 +318,7 @@ function enrol_get_current_courses($fields = NULL, $sort = 'visible DESC,sortord
 		   $ccjoin
 			  JOIN {course_categories} cc ON c.category = cc.id
 			 WHERE $wheres
-			 AND cc.parent IN ( $settings->schools )
+			 $and
 		  $orderby";
 // SSU_AMEND END
 	$params['userid']  = $USER->id;

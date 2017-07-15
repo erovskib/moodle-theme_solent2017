@@ -8,7 +8,7 @@
       <FIELDS>
         <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
         <FIELD NAME="course" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" SEQUENCE="false" COMMENT="Foreign key references course id"/>
-        <FIELD NAME="opt" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false" COMMENT="User image selection."/>
+        <FIELD NAME="opt" TYPE="char" LENGTH="10" NOTNULL="false" SEQUENCE="false" COMMENT="User image selection."/>
       </FIELDS>
       <KEYS>
         <KEY NAME="primary" TYPE="primary" FIELDS="id"/>

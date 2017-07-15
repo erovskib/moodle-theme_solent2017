@@ -477,9 +477,9 @@ class theme_solent2017_core_renderer extends theme_bootstrapbase_core_renderer {
 			$record = new stdclass;
 			$record->id = null;
 			$record->course = $COURSE->id;
-			$record->opt = 1;
+			$record->opt = '01';
 			$DB->insert_record('theme_header', $record, $returnid=true);
-			$opt = 1;
+			$opt = '01';
 		}
 		
 		// $html = html_writer::start_tag('header', array('id' => 'page-header', 'class' => 'clearfix'));
