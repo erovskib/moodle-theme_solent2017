@@ -227,7 +227,7 @@ function solent_number_of_sections(){
 
 					echo 	'<div class="divcoursefieldset"><fieldset class="coursefieldset fieldsetheader">
 							<form action="'. $CFG->wwwroot .'/theme/solent2017/set_header_image.php" method="post">
-							<label for "opt">Select header image:&nbsp; 
+							<label for "opt">Select header image (<a href="/theme/solent2017/pix/unit-header/options.php" target="_blank">browse options</a>):&nbsp; 
 							<select name="opt">';	
 							
 					echo '<option value="0">Not selected</option>';

@@ -327,6 +327,8 @@ div#page-navbar-unit.tts.clearfix{
     background-size: cover;
 }
 
+#page-theme-solent2017-pix-unit-header-options #region-main.span8{width:100%;}
+
 @media (max-width: 1699px){
 	.breadcrumb-button {
 		margin-right: 10px;
