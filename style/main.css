@@ -98,7 +98,7 @@ div#content_hide > section#region-main{
 }
 
 #fullscreenfloat.fullscreen{
-	top:100px;
+	top:100px !important;
 }
 
 img.block-hider-hide, img.block-hider-show{

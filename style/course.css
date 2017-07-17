@@ -57,8 +57,9 @@ body#page-user-profile section#region-main{
 }
 
 div.unit_start, a.unit_descriptor, p.unit_descriptor{
-	color: #575757;
+    color: rgba(87, 87, 87, 0.75);
     margin-bottom: 0;
+    font-weight: bold;
 }
 
 ul.teachers{

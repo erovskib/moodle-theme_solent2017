@@ -19,7 +19,7 @@ $files = scandir($dir);
 array_splice($files, 0, 1);
 array_splice($files, 0, 1);	
 echo '<div">';				
-echo '<table><tr><th align="left" width="5%">Option</th><th>Image</th></tr>';
+echo '<table id="header-options" ><tr><th align="left" width="10%">Option</th><th>Image</th></tr>';
 
 foreach ($files as $k=>$v) {
 	$name = substr($v, 0, strpos($v, "."));

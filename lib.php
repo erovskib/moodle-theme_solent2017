@@ -205,7 +205,7 @@ function solent_number_of_sections(){
 					   echo '<option value="'.$i.'"  '.$selected.'>'.$i++.' </option>';
 			}
 			   
-			echo '  <input type="hidden" name="courseid" value="'. $COURSE->id .'"/>';
+			echo '<input type="hidden" name="courseid" value="'. $COURSE->id .'"/>';
 			echo '&nbsp;&nbsp;&nbsp;<input type="submit" value ="Save">
 				 </select></label></form></fieldset></div>';
 		
@@ -217,7 +217,7 @@ function solent_number_of_sections(){
 					$dir = dirname(__FILE__).'/pix/unit-header';
 					$files = scandir($dir);
 					array_splice($files, 0, 1);
-					array_splice($files, 0, 1);					
+					array_splice($files, 0, 1);		
 			
 					$options = array();
 					foreach ($files as $k=>$v) {
@@ -226,13 +226,15 @@ function solent_number_of_sections(){
 					}
 
 					echo 	'<div class="divcoursefieldset"><fieldset class="coursefieldset fieldsetheader">
-							<form action="'. $CFG->wwwroot .'/theme/solent2017/set_header_image.php" method="post">
-							<label for "opt">Select header image (<a href="/theme/solent2017/pix/unit-header/options.php" target="_blank">browse options</a>):&nbsp; 
-							<select name="opt">';	
+							 <form action="'. $CFG->wwwroot .'/theme/solent2017/set_header_image.php" method="post">
+							 <label for "opt">Select header image (<a href="/theme/solent2017/pix/unit-header/options.php" target="_blank">browse options</a>):&nbsp; 
+							 <select name="opt">';	
 							
-					echo '<option value="0">Not selected</option>';
+					echo '<option value="00">No image</option>';
 					foreach($options as $key=>$val){
-						echo '<option value="' . $key . '"'; if($key == $option->opt) echo 'selected="selected"'; echo '>' . $val . '</option>';
+						if(($val != 'options') && ($val != 'succeed') && ($val != '')){
+							echo '<option value="' . $key . '"'; if($key == $option->opt) echo 'selected="selected"'; echo '>Option ' . $val . '</option>';
+						}
 					}							  
 					   
 					echo '  <input type="hidden" name="course" value="'. $COURSE->id .'"/>';
