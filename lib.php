@@ -211,7 +211,7 @@ function solent_number_of_sections(){
 		
 		
 			if ($COURSE->id > 1){
-				if($COURSE->format == 'onetopic'){
+				//if($COURSE->format == 'onetopic'){
 					//get current option
 					$option = $DB->get_record('theme_header', array('course' => $COURSE->id), '*');	
 					$dir = dirname(__FILE__).'/pix/unit-header';
@@ -241,7 +241,7 @@ function solent_number_of_sections(){
 					echo '  <input type="hidden" name="id" value="'. $option->id .'"/>';
 					echo '&nbsp;&nbsp;&nbsp;<input type="submit" value="Save">
 						 </select></label></form></fieldset></div>';
-				}
+				//}
 			}
 		}
 	}
