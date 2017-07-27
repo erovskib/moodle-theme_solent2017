@@ -30,9 +30,10 @@ input[type="submit"],
 input[type="reset"], 
 #notice .singlebutton+.singlebutton input:hover, 
 #notice .singlebutton+.singlebutton input:active, 
-#notice .singlebutton+.singlebutton input:focus, 
-a.btn, input[type="button"]:hover, 
-a.btn, input[type="button"]:focus, 
+#notice .singlebutton+.singlebutton input:focus,  
+input[type="button"]:hover, 
+/* a.btn, */
+input[type="button"]:focus, 
 input[type="button"]:active, 
 .path-admin .buttons input[type="submit"], .btn-primary, .btn[name="resetbutton"]{
 	background-color: #466273;
@@ -174,3 +175,8 @@ a#toggle-contact-button{
 	margin-left: 15px;
 }
 
+.path-mod-quiz #mod_quiz_navblock .qnbutton {
+
+border: 1px solid #bbb;
+
+}

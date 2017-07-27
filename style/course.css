@@ -56,10 +56,20 @@ body#page-user-profile section#region-main{
 	background-color: #EAEAEA;
 }
 
-div.unit_start, a.unit_descriptor, p.unit_descriptor{
+div.unit_start, p.unit_descriptor{
     color: rgba(87, 87, 87, 0.75);
     margin-bottom: 0;
     font-weight: bold;
+}
+
+.solent_startdate_search{
+	color: #a8a8a8;
+    font-size: 14px;
+    font-weight: normal;
+    width: 100%;
+    float: left;
+    margin-top: 10px;
+	padding-bottom: 5px;
 }
 
 ul.teachers{
