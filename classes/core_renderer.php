@@ -477,9 +477,16 @@ class theme_solent2017_core_renderer extends theme_bootstrapbase_core_renderer {
 			$record = new stdclass;
 			$record->id = null;
 			$record->course = $COURSE->id;
-			$record->opt = '01';
-			$DB->insert_record('theme_header', $record, $returnid=true);
-			$opt = '01';
+			$course_cats = array(163,173,188,211,178,183);
+			if(in_array($COURSE->category, $course_cats)){
+				$record->opt = '08';
+				$DB->insert_record('theme_header', $record, $returnid=true);
+				$opt = '08';
+			}else{
+				$record->opt = '01';
+				$DB->insert_record('theme_header', $record, $returnid=true);
+				$opt = '01';
+			}
 		}
 		
 		// $html = html_writer::start_tag('header', array('id' => 'page-header', 'class' => 'clearfix'));
@@ -494,7 +501,7 @@ class theme_solent2017_core_renderer extends theme_bootstrapbase_core_renderer {
 		
 		$settings = get_config('theme_solent2017');
 
-		if($COURSE->format == 'onetopic'){
+		//if($COURSE->format == 'onetopic'){
 			$html = html_writer::start_tag('header', array('id'=>'page-header-unit', 'class'=>'clearfix'));
 			$html .= $this->context_header();
 			if($COURSE->id == $settings->teach || $COURSE->id == $settings->succeed){
@@ -510,7 +517,7 @@ class theme_solent2017_core_renderer extends theme_bootstrapbase_core_renderer {
 			$html .= html_writer::end_div();
 			$html .= html_writer::end_tag('header');
 			return $html; 
-		}
+		//}
     }
 
 	public function breadcrumbs_ssu() {
