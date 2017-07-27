@@ -35,6 +35,8 @@ $regionmainbox = 'span9 desktop-first-column';
 $regionmain = 'span8 pull-right';
 $sidepre = 'span4 desktop-first-column';
 $sidepost = 'span3 pull-right';
+$current_url = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+
 
 $this->page->requires->js_call_amd('theme_solent2017/border', 'init', array());
 
@@ -90,14 +92,15 @@ echo $OUTPUT->doctype() ?>
 
 <div class="page-wrap">
 <?php
-if((!isloggedin() || isguestuser()) && $CFG->wwwroot . '/index.php'){
+if((!isloggedin() || isguestuser()) && $current_url == $CFG->wwwroot.'/'){
 	echo "<div id='logged_out'>";
 }
 ?>
 
 <?php 
 global $COURSE;
-if($COURSE->format == 'onetopic' && $PAGE->pagelayout == 'course'){
+//if($COURSE->format == 'onetopic' && $PAGE->pagelayout == 'course'){
+if($PAGE->pagelayout == 'course'){
 	echo $OUTPUT->full_header_ssu();
 	echo $OUTPUT->breadcrumbs_ssu();
 }else{
@@ -110,7 +113,7 @@ if($COURSE->format == 'onetopic' && $PAGE->pagelayout == 'course'){
 			<div id="region-main-box" class="<?php echo $regionmainbox; ?>">
 				<div class="row-fluid">
 <?php							
-if((!isloggedin() || isguestuser()) && $CFG->wwwroot . '/index.php'){
+if((!isloggedin() || isguestuser()) && $current_url == $CFG->wwwroot.'/'){
 	echo "<div id='content_hide'>";
 }
 ?>	
@@ -118,25 +121,14 @@ if((!isloggedin() || isguestuser()) && $CFG->wwwroot . '/index.php'){
 						<?php
 						// If in course or unit pages categories add the course title elements
 						global $DB;
-							if ( substr ($_SERVER['REQUEST_URI'], 0, 20)  == '/course/view.php?id='){
-							//$whichcategory =  $DB->get_record_sql('SELECT name  FROM {course_categories} WHERE '.$COURSE->category.' = mdl_course_categories.id ');
-							 // if ($whichcategory->name != "Succeed" ||$whichcategory->name != "CareerBox"){
-							// if ($whichcategory->name == "Unit Pages"){
-								 include($CFG->dirroot.'/local/course_title_elements.php');
-								 // if($COURSE->format == 'onetopic'){
-										// if($COURSE->id != 18863){
-											// echo '<h4 class="learn">Learning materials</h4>';
-										// }else{
-											// echo '<div class="learn-tts"></div>';
-										// }
-								 // }
-							// }
-							}						
+						if(substr($_SERVER['REQUEST_URI'], 0, 20) == '/course/view.php?id='){
+							 include($CFG->dirroot.'/local/course_title_elements.php');
+						}						
 						echo $OUTPUT->main_content();
 						?>
 					</section>
 <?php	
-if((!isloggedin() || isguestuser()) && $CFG->wwwroot . '/index.php'){
+if((!isloggedin() || isguestuser()) && $current_url == $CFG->wwwroot.'/'){
 	echo "</div>"; // end content_hide
 }
 ?>
@@ -147,7 +139,7 @@ if((!isloggedin() || isguestuser()) && $CFG->wwwroot . '/index.php'){
 		</div>
 	</div>
 <?php	
-if((!isloggedin() || isguestuser()) && $CFG->wwwroot . '/index.php'){
+if((!isloggedin() || isguestuser()) && $current_url == $CFG->wwwroot.'/'){
 	echo "</div>"; //end logged out
 }
 ?>	
