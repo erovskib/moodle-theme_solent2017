@@ -380,10 +380,19 @@ class theme_solent2017_core_renderer extends theme_bootstrapbase_core_renderer {
 				"; //this MUST be on a new line otherwise the menu messes up
 			}
 			
+			require_once($CFG->libdir.'/coursecatlib.php');
+			
+			
 			if($courses){
 				foreach($courses as $k=>$v){
-					$mycourses .= "-" . $v->fullname . "|" . $CFG->wwwroot . "/course/view.php?id=" . $v->id . " 
-					"; //this MUST be on a new line otherwise the menu messes up
+					$currentcategory = coursecat::get($v->category, IGNORE_MISSING);
+					if(strtolower($currentcategory->name) == 'unit pages'){
+						$mycourses .= "-" . $v->fullname . " (" . date('d-m-Y',$v->startdate) . ")|" . $CFG->wwwroot . "/course/view.php?id=" . $v->id . " 
+						"; //this MUST be on a new line otherwise the menu messes up
+					}else{
+						$mycourses .= "-" . $v->fullname . "|" . $CFG->wwwroot . "/course/view.php?id=" . $v->id . " 
+						"; //this MUST be on a new line otherwise the menu messes up
+					}
 				}		
 			}	
 					
