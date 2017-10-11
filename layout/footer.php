@@ -39,7 +39,7 @@
 				<nav class="nav">
 					<h3 class="footer__title footer__item nav__item">Solent Futures</h3>
 					<ul class="vertical">
-						<li><a class="footer__item nav__item" href="/careerbox">CareerBox</a></li>
+						<li><a class="footer__item nav__item" href="/careerbox">Succeed@Careers</a></li>
 						<li><a class="footer__item nav__item" href="https://graduatejobs.solent.ac.uk/landingpage/25267/working-on-campus/" target="_blank">Campus Jobs</a></li>
 						<li><a class="footer__item nav__item" href="http://portal.solent.ac.uk/careers/cv-apps-socialmedia/get-noticed.aspx" target="_blank">CV Help</a></li>
 						<li><a class="footer__item nav__item" href="http://portal.solent.ac.uk/careers/work-placements/work-placements.aspx" target="_blank">Placements</a></li>
