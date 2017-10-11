@@ -22,6 +22,18 @@
 .succeed_web-col1{position:relative;float:left;width:34px;height:28px;background-image:url("/theme/solent2017/pix/succeed_web-sq.jpg"); background-repeat:no-repeat; background-position:center;} 
 .succeed_web-col2{position:relative;float:left;height:28px; line-height:28px;  color:#333;} 
 
+.succeed_bulb_new {
+    background-color: #CFE4E4;
+    background-image: url(/theme/solent2017/pix/succeed_remember-bg.jpg);
+    background-repeat: no-repeat;
+    background-position-y: 5px;
+    padding-left: 55px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    min-height: 40px;
+    padding-right: 10px;
+}
+
 .path-mod-book .block_book_toc li {
     clear: both;
     list-style: none;
@@ -32,7 +44,11 @@
     margin-left: 40px;
 }
 
-div.editor_atto button:hover{
-	border: none;
+.atto_group button:hover{
+	border: 0 !important;
+}
+
+.atto_group button:hover:nth-child(n+2){
+	border-left: 1px solid #ccc !important;
 }
 	

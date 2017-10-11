@@ -200,3 +200,13 @@ div.logo {
     display: block;
     float: right;
 }
+
+.userprofile .description {
+    background-color: #fff;
+    padding: 15px 15px 5px 15px;
+    border: 1px solid #ddd;
+}
+
+.userprofile .profile_tree section {
+    border-radius: 2px;
+}

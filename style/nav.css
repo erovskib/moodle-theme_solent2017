@@ -359,7 +359,7 @@
 	}
 	
 	.jsenabled .usermenu .moodle-actionmenu>.menu {
-		min-width: 170px;
+		min-width: 180px;
 	}
 }
 
@@ -545,7 +545,7 @@ div.feedback_item_box_left div.feedback_item_label_left, div.feedback_item_box_l
 }
 
 .jsenabled .usermenu .moodle-actionmenu.show .menu {
-    padding: 5px 10px 0 5px !important;
+    padding: 5px 5px 0 5px !important;
     margin: 1px 0 0;
 }
 
@@ -562,10 +562,6 @@ div.feedback_item_box_left div.feedback_item_label_left, div.feedback_item_box_l
 .usermenu .moodle-actionmenu[data-enhanced] .menu .menu-action.icon:hover img,
 .usermenu .moodle-actionmenu[data-enhanced] .menu .menu-action.icon:focus img {
 	-webkit-filter: brightness(0) invert(1);
-}
-
-.userprofile .profile_tree section {
-    border-radius: 2px;
 }
 
 .moodle-actionmenu ul {

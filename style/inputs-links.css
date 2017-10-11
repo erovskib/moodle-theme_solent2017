@@ -35,7 +35,9 @@ input[type="button"]:hover,
 /* a.btn, */
 input[type="button"]:focus, 
 input[type="button"]:active, 
-.path-admin .buttons input[type="submit"], .btn-primary, .btn[name="resetbutton"]{
+.path-admin .buttons input[type="submit"], .btn-primary, .btn[name="resetbutton"],
+.userprofile .btn,
+.page-context-header .btn{
 	background-color: #466273;
 	border: 1px solid #466273;
     border-radius: 2px;
@@ -168,7 +170,6 @@ p.tree_item:focus{
 
 .page-context-header .header-button-group {
     float: none;
-	margin-left: 15px;
 }
 
 a#toggle-contact-button{
@@ -176,7 +177,5 @@ a#toggle-contact-button{
 }
 
 .path-mod-quiz #mod_quiz_navblock .qnbutton {
-
-border: 1px solid #bbb;
-
+	border: 1px solid #bbb;
 }
