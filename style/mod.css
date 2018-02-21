@@ -51,4 +51,9 @@
 .atto_group button:hover:nth-child(n+2){
 	border-left: 1px solid #ccc !important;
 }
+
+.path-mod-assign #page-content [data-region="grade-panel"] .mform:not(.unresponsive) #fitem_id_grade.fitem .felement {
+    width: -webkit-fill-available;
+    float: left;
+}
 	
